@@ -2,7 +2,22 @@
 
 The simplest menu bar radio app for OS X
 
-###Version 1 TODO list###
+##One Feature
+- Internet radio while you work.
+
+##Many Unfeatures
+- No volume control
+- No EQ
+- No Recording
+- No bloated UI
+- No artwork retrieval
+- No lyrics retrieval
+- No music store integration
+- No social media integration
+- No registration
+- No spam
+
+###Version 1 TODO List###
 
 ####DONE####
 
@@ -21,7 +36,6 @@ The simplest menu bar radio app for OS X
     - Retain station list across launches
     - Dynamically populating the menu with stations
     - Default list of stations for first-ever run
- 
 - Checkmark next to currently playing station
 - Proper menu bar icon
 - Menu bar icon must reflect buffering and playback status
@@ -30,8 +44,8 @@ The simplest menu bar radio app for OS X
 - Preferences dialog
 - Launch app on login
  
-###Version 2###
-- Station browser (based on shoutcast or other third-party source)
+###Version 2 plans###
+- Station browser (based on Shoutcast or better third-party source)
 	- Browse by region
 	- Browse by genre
  
