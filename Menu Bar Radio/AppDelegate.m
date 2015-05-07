@@ -12,14 +12,12 @@
     STKAudioPlayer* audioPlayer;
     NSStatusItem *statusItem;
 }
-
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 
-    
     //Set up the status bar item
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     [statusItem setAlternateImage:[NSImage imageNamed:@"MenuBarIcon-highlighted"]];
@@ -60,60 +58,42 @@
     //TODO
     
     //If we were playing the last time we quit, start playing.
-    
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
         NSLog(@"Auto-starting stream.");
         [self startPlaying];
     }
-    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 
-
-
-
 -(void) startPlaying {
-    //Sample URL: [audioPlayer play:@"http://www.abstractpath.com/files/audiosamples/sample.mp3"];
-    
     /*
-     NRK Icecast sample playlists
-     *** MP3 192 kbit/s
+     *** NRK Icecast sample playlists MP3 @ 192 kbit/s
      P3: http://lyd.nrk.no/nrk_radio_p3_mp3_h
      P13: http://lyd.nrk.no/nrk_radio_p13_mp3_h
      mP3: http://lyd.nrk.no/nrk_radio_mp3_mp3_h
-     *** AAC 128kbit/s
+     *** NRK Icecast sample streams AAC @ 128kbit/s
      http://lyd.nrk.no/nrk_radio_mp3_aac_h
      http://lyd.nrk.no/nrk_radio_p13_aac_h
-     
-     KCRW Eclectic24
-     http://newmedia.kcrw.com/legacy/pls/kcrwmusic.pls //oops this doesn't work, I have to find or write a PLS parser!
+     *** KCRW Eclectic24
+     http://newmedia.kcrw.com/legacy/pls/kcrwmusic.pls //oops this doesn't work, I have to find or write a PLS parser! What about M3U?
      http://kcrw.ic.llnwd.net/stream/kcrw_music // <-- this is the actual stream
-     
      */
     
     [audioPlayer play:@"http://lyd.nrk.no/nrk_radio_p3_mp3_h"];
-    NSLog(@"Playing (hardcoded URL)");
-    
-    
-    //Remember last playing station
-    //TODO
+    NSLog(@"Playing");
     
     //Remember playback state
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wasPlaying"];
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    
 }
 
 -(void) stopPlaying {
     NSLog(@"stopPlaying called.");
     [audioPlayer stop];
-
     //Remember playback state
-    
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"wasPlaying"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
@@ -125,10 +105,6 @@
 
 -(void) showEditStations {
     NSLog(@"showEditStations");
-}
-
--(void) updateControls {
-    //looks like this can be removed
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
@@ -150,13 +126,7 @@
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode {
-    
-    //who in the name of FUCK pulled the carpet from under our feet?
     NSLog(@"*** unexpectedError");
-    
-    
 }
-
-
 
 @end
