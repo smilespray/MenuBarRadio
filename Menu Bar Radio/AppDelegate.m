@@ -52,20 +52,19 @@
     } ];
     
     audioPlayer.delegate = self;
-    audioPlayer.equalizerEnabled = NO; //fuck no
-    audioPlayer.meteringEnabled = NO; //fuck no
-    audioPlayer.volume = 1.0f; //full blast
+    audioPlayer.equalizerEnabled = NO;
+    audioPlayer.meteringEnabled = NO;
+    audioPlayer.volume = 1.0f;
     
     //retrieve last played station from prefs
     //TODO
     
     //If we were playing the last time we quit, start playing.
-    if ([[NSUserDefaults standardUserDefaults] integerForKey:@"wasPlaying"] == 1) {
-        NSLog(@"We were playing on last quit, restarting stream.");
+    
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
+        NSLog(@"Auto-starting stream.");
         [self startPlaying];
     }
-    
-
     
 }
 
@@ -103,7 +102,7 @@
     //TODO
     
     //Remember playback state
-    [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"wasPlaying"];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wasPlaying"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
     
@@ -114,7 +113,8 @@
     [audioPlayer stop];
 
     //Remember playback state
-    [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"wasPlaying"];
+    
+    [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"wasPlaying"];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
