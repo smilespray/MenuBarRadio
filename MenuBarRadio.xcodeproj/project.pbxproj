@@ -11,10 +11,10 @@
 		1A097A491AFBF0120024CF8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A481AFBF0120024CF8F /* main.m */; };
 		1A097A4B1AFBF0120024CF8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A097A4A1AFBF0120024CF8F /* Images.xcassets */; };
 		1A097A4E1AFBF0120024CF8F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A097A4C1AFBF0120024CF8F /* MainMenu.xib */; };
-		1A097A5A1AFBF0120024CF8F /* Menu_Bar_RadioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A591AFBF0120024CF8F /* Menu_Bar_RadioTests.m */; };
+		1A097A5A1AFBF0120024CF8F /* MenuBarRadioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */; };
 		1AE5DF2E1AFC955A00E27183 /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2D1AFC955A00E27183 /* Prefs.xib */; };
 		1AE5DF301AFC96B400E27183 /* Stations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2F1AFC96B400E27183 /* Stations.xib */; };
-		FDB4ED92C3FA03F57E637940 /* libPods-Menu Bar Radio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF994EFC0065EED67499740 /* libPods-Menu Bar Radio.a */; };
+		94F1C99095A49B864D2CC5B7 /* libPods-MenuBarRadio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		130DA62044E7BE7C42086F36 /* Pods-Menu Bar Radio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu Bar Radio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Menu Bar Radio/Pods-Menu Bar Radio.debug.xcconfig"; sourceTree = "<group>"; };
+		130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
 		1A097A401AFBF0120024CF8F /* Menu Bar Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A097A441AFBF0120024CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A097A451AFBF0120024CF8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,13 +36,13 @@
 		1A097A481AFBF0120024CF8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1A097A4A1AFBF0120024CF8F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1A097A4D1AFBF0120024CF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		1A097A531AFBF0120024CF8F /* Menu Bar RadioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menu Bar RadioTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A097A531AFBF0120024CF8F /* Menu Bar Radio Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menu Bar Radio Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A097A581AFBF0120024CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A097A591AFBF0120024CF8F /* Menu_Bar_RadioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Menu_Bar_RadioTests.m; sourceTree = "<group>"; };
+		1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBarRadioTests.m; sourceTree = "<group>"; };
 		1AE5DF2D1AFC955A00E27183 /* Prefs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
 		1AE5DF2F1AFC96B400E27183 /* Stations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Stations.xib; sourceTree = "<group>"; };
-		1DF994EFC0065EED67499740 /* libPods-Menu Bar Radio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Menu Bar Radio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57996AD969B4FE473975BEC0 /* Pods-Menu Bar Radio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Menu Bar Radio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Menu Bar Radio/Pods-Menu Bar Radio.release.xcconfig"; sourceTree = "<group>"; };
+		57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
+		F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB4ED92C3FA03F57E637940 /* libPods-Menu Bar Radio.a in Frameworks */,
+				94F1C99095A49B864D2CC5B7 /* libPods-MenuBarRadio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,8 +67,8 @@
 		1A097A371AFBF0120024CF8F = {
 			isa = PBXGroup;
 			children = (
-				1A097A421AFBF0120024CF8F /* Menu Bar Radio */,
-				1A097A561AFBF0120024CF8F /* Menu Bar RadioTests */,
+				1A097A421AFBF0120024CF8F /* MenuBarRadio */,
+				1A097A561AFBF0120024CF8F /* MenuBarRadioTests */,
 				1A097A411AFBF0120024CF8F /* Products */,
 				65EFD65204F88FEFA8464443 /* Pods */,
 				740A32BEFBA6C57F282F11EF /* Frameworks */,
@@ -79,12 +79,12 @@
 			isa = PBXGroup;
 			children = (
 				1A097A401AFBF0120024CF8F /* Menu Bar Radio.app */,
-				1A097A531AFBF0120024CF8F /* Menu Bar RadioTests.xctest */,
+				1A097A531AFBF0120024CF8F /* Menu Bar Radio Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A097A421AFBF0120024CF8F /* Menu Bar Radio */ = {
+		1A097A421AFBF0120024CF8F /* MenuBarRadio */ = {
 			isa = PBXGroup;
 			children = (
 				1A097A451AFBF0120024CF8F /* AppDelegate.h */,
@@ -95,7 +95,7 @@
 				1AE5DF2F1AFC96B400E27183 /* Stations.xib */,
 				1A097A431AFBF0120024CF8F /* Supporting Files */,
 			);
-			path = "Menu Bar Radio";
+			path = MenuBarRadio;
 			sourceTree = "<group>";
 		};
 		1A097A431AFBF0120024CF8F /* Supporting Files */ = {
@@ -107,13 +107,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1A097A561AFBF0120024CF8F /* Menu Bar RadioTests */ = {
+		1A097A561AFBF0120024CF8F /* MenuBarRadioTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A097A591AFBF0120024CF8F /* Menu_Bar_RadioTests.m */,
+				1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */,
 				1A097A571AFBF0120024CF8F /* Supporting Files */,
 			);
-			path = "Menu Bar RadioTests";
+			path = MenuBarRadioTests;
 			sourceTree = "<group>";
 		};
 		1A097A571AFBF0120024CF8F /* Supporting Files */ = {
@@ -127,8 +127,8 @@
 		65EFD65204F88FEFA8464443 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				130DA62044E7BE7C42086F36 /* Pods-Menu Bar Radio.debug.xcconfig */,
-				57996AD969B4FE473975BEC0 /* Pods-Menu Bar Radio.release.xcconfig */,
+				130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */,
+				57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 		740A32BEFBA6C57F282F11EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1DF994EFC0065EED67499740 /* libPods-Menu Bar Radio.a */,
+				F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,9 +144,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A097A3F1AFBF0120024CF8F /* Menu Bar Radio */ = {
+		1A097A3F1AFBF0120024CF8F /* MenuBarRadio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A097A5D1AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "Menu Bar Radio" */;
+			buildConfigurationList = 1A097A5D1AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadio" */;
 			buildPhases = (
 				9B67F738B23DB47493079073 /* Check Pods Manifest.lock */,
 				1A097A3C1AFBF0120024CF8F /* Sources */,
@@ -158,14 +158,14 @@
 			);
 			dependencies = (
 			);
-			name = "Menu Bar Radio";
+			name = MenuBarRadio;
 			productName = "Menu Bar Radio";
 			productReference = 1A097A401AFBF0120024CF8F /* Menu Bar Radio.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1A097A521AFBF0120024CF8F /* Menu Bar RadioTests */ = {
+		1A097A521AFBF0120024CF8F /* MenuBarRadioTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A097A601AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "Menu Bar RadioTests" */;
+			buildConfigurationList = 1A097A601AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadioTests" */;
 			buildPhases = (
 				1A097A4F1AFBF0120024CF8F /* Sources */,
 				1A097A501AFBF0120024CF8F /* Frameworks */,
@@ -176,9 +176,9 @@
 			dependencies = (
 				1A097A551AFBF0120024CF8F /* PBXTargetDependency */,
 			);
-			name = "Menu Bar RadioTests";
+			name = MenuBarRadioTests;
 			productName = "Menu Bar RadioTests";
-			productReference = 1A097A531AFBF0120024CF8F /* Menu Bar RadioTests.xctest */;
+			productReference = 1A097A531AFBF0120024CF8F /* Menu Bar Radio Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -199,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A097A3B1AFBF0120024CF8F /* Build configuration list for PBXProject "Menu Bar Radio" */;
+			buildConfigurationList = 1A097A3B1AFBF0120024CF8F /* Build configuration list for PBXProject "MenuBarRadio" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -212,8 +212,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A097A3F1AFBF0120024CF8F /* Menu Bar Radio */,
-				1A097A521AFBF0120024CF8F /* Menu Bar RadioTests */,
+				1A097A3F1AFBF0120024CF8F /* MenuBarRadio */,
+				1A097A521AFBF0120024CF8F /* MenuBarRadioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -252,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Menu Bar Radio/Pods-Menu Bar Radio-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9B67F738B23DB47493079073 /* Check Pods Manifest.lock */ = {
@@ -286,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A097A5A1AFBF0120024CF8F /* Menu_Bar_RadioTests.m in Sources */,
+				1A097A5A1AFBF0120024CF8F /* MenuBarRadioTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +295,7 @@
 /* Begin PBXTargetDependency section */
 		1A097A551AFBF0120024CF8F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1A097A3F1AFBF0120024CF8F /* Menu Bar Radio */;
+			target = 1A097A3F1AFBF0120024CF8F /* MenuBarRadio */;
 			targetProxy = 1A097A541AFBF0120024CF8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -393,25 +393,25 @@
 		};
 		1A097A5E1AFBF0120024CF8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 130DA62044E7BE7C42086F36 /* Pods-Menu Bar Radio.debug.xcconfig */;
+			baseConfigurationReference = 130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Menu Bar Radio/Info.plist";
+				INFOPLIST_FILE = MenuBarRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Menu Bar Radio";
 			};
 			name = Debug;
 		};
 		1A097A5F1AFBF0120024CF8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57996AD969B4FE473975BEC0 /* Pods-Menu Bar Radio.release.xcconfig */;
+			baseConfigurationReference = 57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "Menu Bar Radio/Info.plist";
+				INFOPLIST_FILE = MenuBarRadio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Menu Bar Radio";
 			};
 			name = Release;
 		};
@@ -428,9 +428,9 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Menu Bar RadioTests/Info.plist";
+				INFOPLIST_FILE = MenuBarRadioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Menu Bar Radio Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bar Radio.app/Contents/MacOS/Menu Bar Radio";
 			};
 			name = Debug;
@@ -444,9 +444,9 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Menu Bar RadioTests/Info.plist";
+				INFOPLIST_FILE = MenuBarRadioTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Menu Bar Radio Tests";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Menu Bar Radio.app/Contents/MacOS/Menu Bar Radio";
 			};
 			name = Release;
@@ -454,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A097A3B1AFBF0120024CF8F /* Build configuration list for PBXProject "Menu Bar Radio" */ = {
+		1A097A3B1AFBF0120024CF8F /* Build configuration list for PBXProject "MenuBarRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A097A5B1AFBF0120024CF8F /* Debug */,
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A097A5D1AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "Menu Bar Radio" */ = {
+		1A097A5D1AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A097A5E1AFBF0120024CF8F /* Debug */,
@@ -472,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A097A601AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "Menu Bar RadioTests" */ = {
+		1A097A601AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A097A611AFBF0120024CF8F /* Debug */,

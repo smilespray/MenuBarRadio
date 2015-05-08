@@ -1,5 +1,5 @@
 //
-//  Menu_Bar_RadioTests.m
+//  MenuBarRadioTests.m
 //  Menu Bar RadioTests
 //
 //  Created by Snorre Milde on 07/05/15.
@@ -9,11 +9,11 @@
 #import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 
-@interface Menu_Bar_RadioTests : XCTestCase
+@interface MenuBarRadioTests : XCTestCase
 
 @end
 
-@implementation Menu_Bar_RadioTests
+@implementation MenuBarRadioTests
 
 - (void)setUp {
     [super setUp];

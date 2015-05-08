@@ -1,6 +1,6 @@
-#include "Pods-Menu Bar Radio-StreamingKit.xcconfig"
+#include "Pods-MenuBarRadio-StreamingKit.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/StreamingKit" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/StreamingKit"
-OTHER_LDFLAGS = ${PODS_MENU_BAR_RADIO_STREAMINGKIT_OTHER_LDFLAGS} -ObjC
+OTHER_LDFLAGS = ${PODS_MENUBARRADIO_STREAMINGKIT_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}
 SKIP_INSTALL = YES
