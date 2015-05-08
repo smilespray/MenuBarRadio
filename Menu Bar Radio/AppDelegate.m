@@ -127,12 +127,9 @@
 
 -(void) showPrefs {
     NSLog(@"showPrefs");
-    
     prefsWindowController = [[NSWindowController alloc] initWithWindowNibName:@"Prefs"];
     [prefsWindowController showWindow:self];
-
-    NSLog(@"*** DEFAULTS:\n %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
-
+    //NSLog(@"*** DEFAULTS:\n %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 }
 
 -(void) showEditStations {
