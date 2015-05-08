@@ -61,7 +61,7 @@
     
     //If we were playing the last time we quit, start playing.
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
-        NSLog(@"Auto-starting stream.");
+        NSLog(@"Auto-starting stream on launch.");
         [self startPlaying];
     }
 }
@@ -82,10 +82,35 @@
      *** KCRW Eclectic24
      http://newmedia.kcrw.com/legacy/pls/kcrwmusic.pls //oops this doesn't work, I have to find or write a PLS parser! What about M3U?
      http://kcrw.ic.llnwd.net/stream/kcrw_music // <-- this is the actual stream
+     
+     *** Groove Salad
+     http://somafm.com/groovesalad.pls
+
+     Here is the Groove Salad PLS dumped with curl:
+
+     [playlist]
+     numberofentries=5
+     File1=http://uwstream1.somafm.com:80
+     Title1=SomaFM: Groove Salad (#1 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
+     Length1=-1
+     File2=http://xstream1.somafm.com:8032
+     Title2=SomaFM: Groove Salad (#2 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
+     Length2=-1
+     File3=http://uwstream2.somafm.com:8032
+     Title3=SomaFM: Groove Salad (#3 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
+     Length3=-1
+     File4=http://uwstream3.somafm.com:8032
+     Title4=SomaFM: Groove Salad (#4 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
+     Length4=-1
+     File5=http://ice.somafm.com/groovesalad
+     Title5=SomaFM: Groove Salad (Firewall-friendly 128k mp3) A nicely chilled plate of ambient/downtempo beats and grooves.
+     Length5=-1
+     Version=2
+     
      */
     
-    [audioPlayer play:@"http://lyd.nrk.no/nrk_radio_p3_mp3_h"];
-    NSLog(@"Playing");
+    [audioPlayer play:@"http://kcrw.ic.llnwd.net/stream/kcrw_music"];
+    NSLog(@"startPlaying");
     
     //Remember playback state
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"wasPlaying"];
@@ -116,26 +141,31 @@
     [stationsWindowsController showWindow:self];
 }
 
+-(void) audioPlayer:(STKAudioPlayer*)audioPlayer logInfo:(NSString*)line {
+    NSLog(@"logInfo: %@", line);
+}
+
+
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
-    NSLog(@"*** didStartPlayingQueueItemId");
+    //NSLog(@"*** didStartPlayingQueueItemId");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId {
-    NSLog(@"*** didFinishBufferingSourceWithQueueItemId");
+    //NSLog(@"*** didFinishBufferingSourceWithQueueItemId");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState {
     //Handle state changes, update the menu etc?
-    NSLog(@"*** stateChanged");
+    //NSLog(@"*** stateChanged");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration {
-    NSLog(@"*** didFinishPlayingQueueItemId");
+    //NSLog(@"*** didFinishPlayingQueueItemId");
     
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode {
-    NSLog(@"*** unexpectedError");
+    NSLog(@"*** unexpectedError!");
 }
 
 @end
