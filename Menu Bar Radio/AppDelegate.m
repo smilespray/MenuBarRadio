@@ -11,6 +11,8 @@
 @interface AppDelegate () {
     STKAudioPlayer* audioPlayer;
     NSStatusItem *statusItem;
+    NSWindowController *prefsWindowController;
+    NSWindowController *stationsWindowsController;
 }
 @end
 
@@ -100,11 +102,18 @@
 
 -(void) showPrefs {
     NSLog(@"showPrefs");
+    
+    prefsWindowController = [[NSWindowController alloc] initWithWindowNibName:@"Prefs"];
+    [prefsWindowController showWindow:self];
+
     NSLog(@"*** DEFAULTS:\n %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
+
 }
 
 -(void) showEditStations {
     NSLog(@"showEditStations");
+    stationsWindowsController = [[NSWindowController alloc] initWithWindowNibName:@"Stations"];
+    [stationsWindowsController showWindow:self];
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
