@@ -64,7 +64,7 @@ NSString *kRadioStationServiceStationURLKey = @"url";
 {
     void(^finito)(NSUInteger, NSUInteger, NSUInteger) = ^(NSUInteger inserted, NSUInteger updated, NSUInteger deleted) {
         if (inserted == 0 && updated == 0 && deleted == 0) {
-            NSLog(@"Successfully sync radio stations feed, no need to update local database");
+            NSLog(@"Successfully synced radio stations feed, no need to update local database");
             if (completion) {
                 completion(YES, nil);
             }
@@ -75,7 +75,7 @@ NSString *kRadioStationServiceStationURLKey = @"url";
             if (completion) {
                 completion(YES, nil);
             }
-            NSLog(@"Successfully sync radio stations feed, inserted %lu, updated %lu and deleted %lu stations",
+            NSLog(@"Successfully synced radio stations feed, inserted %lu, updated %lu and deleted %lu stations",
                   (unsigned long)inserted,
                   (unsigned long)updated,
                   (unsigned long)deleted);
