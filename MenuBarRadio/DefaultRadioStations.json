@@ -1,0 +1,11 @@
+{
+	"version":4,
+	"regions":[
+    {"code":"NO", "name":"Norway", "stations":[
+    	{"name":"NRK P2", "url":"http://lyd.nrk.no/nrk_radio_p2_mp3_h"},
+		{"name":"NRK P3", "url":"http://lyd.nrk.no/nrk_radio_p3_mp3_h"},
+		{"name":"NRK P13", "url":"http://lyd.nrk.no/nrk_radio_p13_mp3_h"},
+		{"name":"NRK mP3", "url":"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"}]},
+    {"code":"US", "name":"United States", "stations":[
+		{"name":"KCWR", "url":"http://kcrw.ic.llnwd.net/stream/kcrw_music"}]}
+]}

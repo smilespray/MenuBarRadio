@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1BA7991AFD527100592F5A /* MenuBarRadio.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7971AFD527100592F5A /* MenuBarRadio.xcdatamodeld */; };
+		0B1BA7CF1AFD5A4100592F5A /* RadioStationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7CE1AFD5A4100592F5A /* RadioStationService.m */; };
+		0B1BA7D41AFD5AC000592F5A /* DAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7D31AFD5AC000592F5A /* DAO.m */; };
+		0B1BA7D71AFD5ADE00592F5A /* RadioStationDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7D61AFD5ADE00592F5A /* RadioStationDAO.m */; };
+		0B1BA7DA1AFD61B500592F5A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7D91AFD61B500592F5A /* Constants.m */; };
+		0B1BA7E01AFE8D7900592F5A /* ManagedObjectContextObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7DF1AFE8D7900592F5A /* ManagedObjectContextObject.m */; };
+		0B1BA7E41AFEAF6100592F5A /* RadioStation+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7E31AFEAF6100592F5A /* RadioStation+Extensions.m */; };
+		0B1BA7EA1AFEB3D600592F5A /* RadioStation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7E91AFEB3D600592F5A /* RadioStation.m */; };
+		0B1BA7ED1AFEB99A00592F5A /* StoreSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7EC1AFEB99A00592F5A /* StoreSettings.m */; };
+		0B1BA7F01AFEB9BA00592F5A /* StoreSettingsDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7EF1AFEB9BA00592F5A /* StoreSettingsDAO.m */; };
+		0B1BA7F31AFEB9E400592F5A /* StoreSettings+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1BA7F21AFEB9E400592F5A /* StoreSettings+Extensions.m */; };
 		1A097A471AFBF0120024CF8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A461AFBF0120024CF8F /* AppDelegate.m */; };
 		1A097A491AFBF0120024CF8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A481AFBF0120024CF8F /* main.m */; };
 		1A097A4B1AFBF0120024CF8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A097A4A1AFBF0120024CF8F /* Images.xcassets */; };
@@ -28,6 +39,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1BA7981AFD527100592F5A /* MenuBarRadio.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MenuBarRadio.xcdatamodel; sourceTree = "<group>"; };
+		0B1BA7CD1AFD5A4100592F5A /* RadioStationService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioStationService.h; sourceTree = "<group>"; };
+		0B1BA7CE1AFD5A4100592F5A /* RadioStationService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioStationService.m; sourceTree = "<group>"; };
+		0B1BA7D21AFD5AC000592F5A /* DAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DAO.h; sourceTree = "<group>"; };
+		0B1BA7D31AFD5AC000592F5A /* DAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DAO.m; sourceTree = "<group>"; };
+		0B1BA7D51AFD5ADE00592F5A /* RadioStationDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioStationDAO.h; sourceTree = "<group>"; };
+		0B1BA7D61AFD5ADE00592F5A /* RadioStationDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioStationDAO.m; sourceTree = "<group>"; };
+		0B1BA7D81AFD61B500592F5A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0B1BA7D91AFD61B500592F5A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		0B1BA7DE1AFE8D7900592F5A /* ManagedObjectContextObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManagedObjectContextObject.h; sourceTree = "<group>"; };
+		0B1BA7DF1AFE8D7900592F5A /* ManagedObjectContextObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManagedObjectContextObject.m; sourceTree = "<group>"; };
+		0B1BA7E21AFEAF6100592F5A /* RadioStation+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RadioStation+Extensions.h"; sourceTree = "<group>"; };
+		0B1BA7E31AFEAF6100592F5A /* RadioStation+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RadioStation+Extensions.m"; sourceTree = "<group>"; };
+		0B1BA7E81AFEB3D600592F5A /* RadioStation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioStation.h; sourceTree = "<group>"; };
+		0B1BA7E91AFEB3D600592F5A /* RadioStation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioStation.m; sourceTree = "<group>"; };
+		0B1BA7EB1AFEB99A00592F5A /* StoreSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreSettings.h; sourceTree = "<group>"; };
+		0B1BA7EC1AFEB99A00592F5A /* StoreSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreSettings.m; sourceTree = "<group>"; };
+		0B1BA7EE1AFEB9BA00592F5A /* StoreSettingsDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoreSettingsDAO.h; sourceTree = "<group>"; };
+		0B1BA7EF1AFEB9BA00592F5A /* StoreSettingsDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreSettingsDAO.m; sourceTree = "<group>"; };
+		0B1BA7F11AFEB9E400592F5A /* StoreSettings+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoreSettings+Extensions.h"; sourceTree = "<group>"; };
+		0B1BA7F21AFEB9E400592F5A /* StoreSettings+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StoreSettings+Extensions.m"; sourceTree = "<group>"; };
 		130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
 		1A097A401AFBF0120024CF8F /* Menu Bar Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A097A441AFBF0120024CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,10 +121,31 @@
 			children = (
 				1A097A451AFBF0120024CF8F /* AppDelegate.h */,
 				1A097A461AFBF0120024CF8F /* AppDelegate.m */,
+				0B1BA7D81AFD61B500592F5A /* Constants.h */,
+				0B1BA7D91AFD61B500592F5A /* Constants.m */,
+				0B1BA7D21AFD5AC000592F5A /* DAO.h */,
+				0B1BA7D31AFD5AC000592F5A /* DAO.m */,
+				0B1BA7EB1AFEB99A00592F5A /* StoreSettings.h */,
+				0B1BA7EC1AFEB99A00592F5A /* StoreSettings.m */,
+				0B1BA7F11AFEB9E400592F5A /* StoreSettings+Extensions.h */,
+				0B1BA7F21AFEB9E400592F5A /* StoreSettings+Extensions.m */,
+				0B1BA7EE1AFEB9BA00592F5A /* StoreSettingsDAO.h */,
+				0B1BA7EF1AFEB9BA00592F5A /* StoreSettingsDAO.m */,
+				0B1BA7E81AFEB3D600592F5A /* RadioStation.h */,
+				0B1BA7E91AFEB3D600592F5A /* RadioStation.m */,
+				0B1BA7E21AFEAF6100592F5A /* RadioStation+Extensions.h */,
+				0B1BA7E31AFEAF6100592F5A /* RadioStation+Extensions.m */,
+				0B1BA7D51AFD5ADE00592F5A /* RadioStationDAO.h */,
+				0B1BA7D61AFD5ADE00592F5A /* RadioStationDAO.m */,
+				0B1BA7CD1AFD5A4100592F5A /* RadioStationService.h */,
+				0B1BA7CE1AFD5A4100592F5A /* RadioStationService.m */,
+				0B1BA7DE1AFE8D7900592F5A /* ManagedObjectContextObject.h */,
+				0B1BA7DF1AFE8D7900592F5A /* ManagedObjectContextObject.m */,
 				1A097A4A1AFBF0120024CF8F /* Images.xcassets */,
 				1A097A4C1AFBF0120024CF8F /* MainMenu.xib */,
 				1AE5DF2D1AFC955A00E27183 /* Prefs.xib */,
 				1AE5DF2F1AFC96B400E27183 /* Stations.xib */,
+				0B1BA7971AFD527100592F5A /* MenuBarRadio.xcdatamodeld */,
 				1A097A431AFBF0120024CF8F /* Supporting Files */,
 			);
 			path = MenuBarRadio;
@@ -277,8 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1BA7ED1AFEB99A00592F5A /* StoreSettings.m in Sources */,
+				0B1BA7D41AFD5AC000592F5A /* DAO.m in Sources */,
+				0B1BA7D71AFD5ADE00592F5A /* RadioStationDAO.m in Sources */,
 				1A097A491AFBF0120024CF8F /* main.m in Sources */,
+				0B1BA7DA1AFD61B500592F5A /* Constants.m in Sources */,
+				0B1BA7E01AFE8D7900592F5A /* ManagedObjectContextObject.m in Sources */,
+				0B1BA7991AFD527100592F5A /* MenuBarRadio.xcdatamodeld in Sources */,
+				0B1BA7CF1AFD5A4100592F5A /* RadioStationService.m in Sources */,
+				0B1BA7E41AFEAF6100592F5A /* RadioStation+Extensions.m in Sources */,
+				0B1BA7EA1AFEB3D600592F5A /* RadioStation.m in Sources */,
 				1A097A471AFBF0120024CF8F /* AppDelegate.m in Sources */,
+				0B1BA7F01AFEB9BA00592F5A /* StoreSettingsDAO.m in Sources */,
+				0B1BA7F31AFEB9E400592F5A /* StoreSettings+Extensions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +546,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		0B1BA7971AFD527100592F5A /* MenuBarRadio.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B1BA7981AFD527100592F5A /* MenuBarRadio.xcdatamodel */,
+			);
+			currentVersion = 0B1BA7981AFD527100592F5A /* MenuBarRadio.xcdatamodel */;
+			path = MenuBarRadio.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1A097A381AFBF0120024CF8F /* Project object */;
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D136" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="RadioStation" representedClassName="RadioStation" syncable="YES">
+        <attribute name="favorite" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="origin" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="playing" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="syncUUID" attributeType="String" syncable="YES"/>
+        <attribute name="url" attributeType="String" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="name"/>
+                <index value="origin"/>
+            </compoundIndex>
+            <compoundIndex>
+                <index value="syncUUID"/>
+                <index value="origin"/>
+            </compoundIndex>
+        </compoundIndexes>
+    </entity>
+    <entity name="StoreSettings" representedClassName="StoreSettings" syncable="YES">
+        <attribute name="radioStationsVersion" optional="YES" attributeType="Integer 64" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RadioStation" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="StoreSettings" positionX="-54" positionY="36" width="128" height="60"/>
+    </elements>
+</model>
