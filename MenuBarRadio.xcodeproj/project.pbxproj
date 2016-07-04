@@ -25,7 +25,8 @@
 		1A097A5A1AFBF0120024CF8F /* MenuBarRadioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */; };
 		1AE5DF2E1AFC955A00E27183 /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2D1AFC955A00E27183 /* Prefs.xib */; };
 		1AE5DF301AFC96B400E27183 /* Stations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2F1AFC96B400E27183 /* Stations.xib */; };
-		94F1C99095A49B864D2CC5B7 /* libPods-MenuBarRadio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */; };
+		63E03A5ABD20F65C8A9BC6CF /* libPods-MenuBarRadio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE9D2096B1EB3DE5D2251FF /* libPods-MenuBarRadio.a */; };
+		BC607462BAB3B87188AD67A4 /* libPods-MenuBarRadioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A59E8B73DBC5401992C5D2E /* libPods-MenuBarRadioTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,6 @@
 		0B1BA7EF1AFEB9BA00592F5A /* StoreSettingsDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoreSettingsDAO.m; sourceTree = "<group>"; };
 		0B1BA7F11AFEB9E400592F5A /* StoreSettings+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StoreSettings+Extensions.h"; sourceTree = "<group>"; };
 		0B1BA7F21AFEB9E400592F5A /* StoreSettings+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "StoreSettings+Extensions.m"; sourceTree = "<group>"; };
-		130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
 		1A097A401AFBF0120024CF8F /* Menu Bar Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Menu Bar Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A097A441AFBF0120024CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A097A451AFBF0120024CF8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,8 +73,12 @@
 		1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBarRadioTests.m; sourceTree = "<group>"; };
 		1AE5DF2D1AFC955A00E27183 /* Prefs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
 		1AE5DF2F1AFC96B400E27183 /* Stations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Stations.xib; sourceTree = "<group>"; };
-		57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
-		F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7419BC08588364954DB91468 /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
+		7DE9D2096B1EB3DE5D2251FF /* libPods-MenuBarRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		82AAC43D6D1D35E95B80D781 /* Pods-MenuBarRadioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadioTests/Pods-MenuBarRadioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		90B6D2D0C5F51FB4653DE146 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
+		9A59E8B73DBC5401992C5D2E /* libPods-MenuBarRadioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuBarRadioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD06EEB32383E7F08CE4812A /* Pods-MenuBarRadioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadioTests/Pods-MenuBarRadioTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F1C99095A49B864D2CC5B7 /* libPods-MenuBarRadio.a in Frameworks */,
+				63E03A5ABD20F65C8A9BC6CF /* libPods-MenuBarRadio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC607462BAB3B87188AD67A4 /* libPods-MenuBarRadioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +107,8 @@
 				1A097A421AFBF0120024CF8F /* MenuBarRadio */,
 				1A097A561AFBF0120024CF8F /* MenuBarRadioTests */,
 				1A097A411AFBF0120024CF8F /* Products */,
-				65EFD65204F88FEFA8464443 /* Pods */,
-				740A32BEFBA6C57F282F11EF /* Frameworks */,
+				656212A441EA2E7D7C6AAEBB /* Pods */,
+				E4D6B031702E1F7076FD9305 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,19 +182,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		65EFD65204F88FEFA8464443 /* Pods */ = {
+		656212A441EA2E7D7C6AAEBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */,
-				57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */,
+				90B6D2D0C5F51FB4653DE146 /* Pods-MenuBarRadio.debug.xcconfig */,
+				7419BC08588364954DB91468 /* Pods-MenuBarRadio.release.xcconfig */,
+				82AAC43D6D1D35E95B80D781 /* Pods-MenuBarRadioTests.debug.xcconfig */,
+				AD06EEB32383E7F08CE4812A /* Pods-MenuBarRadioTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		740A32BEFBA6C57F282F11EF /* Frameworks */ = {
+		E4D6B031702E1F7076FD9305 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F0D3863739452B710B83F076 /* libPods-MenuBarRadio.a */,
+				7DE9D2096B1EB3DE5D2251FF /* libPods-MenuBarRadio.a */,
+				9A59E8B73DBC5401992C5D2E /* libPods-MenuBarRadioTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,11 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A097A5D1AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadio" */;
 			buildPhases = (
-				9B67F738B23DB47493079073 /* Check Pods Manifest.lock */,
+				49FEAA5DF56879D91014AB65 /* [CP] Check Pods Manifest.lock */,
 				1A097A3C1AFBF0120024CF8F /* Sources */,
 				1A097A3D1AFBF0120024CF8F /* Frameworks */,
 				1A097A3E1AFBF0120024CF8F /* Resources */,
-				2AB7B4798E11FBBFAA912F09 /* Copy Pods Resources */,
+				E963B059B691B9EE5C19D666 /* [CP] Embed Pods Frameworks */,
+				34472D06190F122961A392ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -220,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1A097A601AFBF0120024CF8F /* Build configuration list for PBXNativeTarget "MenuBarRadioTests" */;
 			buildPhases = (
+				67DEDD79E7617FE089285134 /* [CP] Check Pods Manifest.lock */,
 				1A097A4F1AFBF0120024CF8F /* Sources */,
 				1A097A501AFBF0120024CF8F /* Frameworks */,
 				1A097A511AFBF0120024CF8F /* Resources */,
+				3308AC2B91CB44D3C74DB910 /* [CP] Embed Pods Frameworks */,
+				69EEB3B5B0C93657487CF233 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,14 +305,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2AB7B4798E11FBBFAA912F09 /* Copy Pods Resources */ = {
+		3308AC2B91CB44D3C74DB910 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MenuBarRadioTests/Pods-MenuBarRadioTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34472D06190F122961A392ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,19 +335,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9B67F738B23DB47493079073 /* Check Pods Manifest.lock */ = {
+		49FEAA5DF56879D91014AB65 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67DEDD79E7617FE089285134 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69EEB3B5B0C93657487CF233 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MenuBarRadioTests/Pods-MenuBarRadioTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E963B059B691B9EE5C19D666 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -457,7 +529,7 @@
 		};
 		1A097A5E1AFBF0120024CF8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 130DA62044E7BE7C42086F36 /* Pods-MenuBarRadio.debug.xcconfig */;
+			baseConfigurationReference = 90B6D2D0C5F51FB4653DE146 /* Pods-MenuBarRadio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -469,7 +541,7 @@
 		};
 		1A097A5F1AFBF0120024CF8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57996AD969B4FE473975BEC0 /* Pods-MenuBarRadio.release.xcconfig */;
+			baseConfigurationReference = 7419BC08588364954DB91468 /* Pods-MenuBarRadio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -481,6 +553,7 @@
 		};
 		1A097A611AFBF0120024CF8F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82AAC43D6D1D35E95B80D781 /* Pods-MenuBarRadioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -501,6 +574,7 @@
 		};
 		1A097A621AFBF0120024CF8F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD06EEB32383E7F08CE4812A /* Pods-MenuBarRadioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
