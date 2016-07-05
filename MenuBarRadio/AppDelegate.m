@@ -49,9 +49,9 @@
     [menu addItemWithTitle:@"NRK mP3" action:@selector(playNRKMP3:) keyEquivalent:@""];
     [menu addItemWithTitle:@"KCRW Music" action:@selector(playSomaFM:) keyEquivalent:@""];
     
-    [menu addItem:[NSMenuItem separatorItem]];
-    [menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
+    //[menu addItem:[NSMenuItem separatorItem]];
+    //[menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
+    //[menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
     
     [menu addItem:[NSMenuItem separatorItem]];
     [menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
