@@ -15,6 +15,9 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
+@property NSMenu *menu;
+@property NSArray *stationList;
+
 @property id currentMenuItem;
 
 @end

@@ -16,7 +16,6 @@
     NSStatusItem *statusItem;
     NSWindowController *prefsWindowController;
     NSWindowController *stationsWindowsController;
-
 }
 
 - (void)syncRadioStations;
@@ -29,7 +28,14 @@
     
     // sync the radio stations
     //[self syncRadioStations];
-
+    
+    //Set up the station list
+    _stationList = @[@"http://lyd.nrk.no/nrk_radio_p3_mp3_h",
+                     @"http://lyd.nrk.no/nrk_radio_p13_mp3_h",
+                     @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h",
+                     @"http://kcrw.ic.llnwd.net/stream/kcrw_music",
+                     @"http://ice2.somafm.com/groovesalad-128-aac"];
+    
     //Set up the status bar item
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
     NSImage *statusImage = [NSImage imageNamed:@"MenuBarIcon"];
@@ -38,42 +44,43 @@
     [statusItem setHighlightMode:YES];
     
     //Set up the menu
-    NSMenu *menu = [[NSMenu alloc] init];
-    [menu addItemWithTitle:@"Play" action:@selector(startPlaying:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"Stop" action:@selector(stopPlaying:) keyEquivalent:@""];
-    [menu addItem:[NSMenuItem separatorItem]];
+    _menu = [[NSMenu alloc] init];
+    [_menu addItemWithTitle:@"Play" action:@selector(startPlaying:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"Stop" action:@selector(stopPlaying:) keyEquivalent:@""];
+    [_menu addItem:[NSMenuItem separatorItem]];
     
     //List of stations (placeholder for now)
-    [menu addItemWithTitle:@"NRK P3" action:@selector(playNRKP3:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"NRK P13" action:@selector(playNRKP13:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"NRK mP3" action:@selector(playNRKMP3:) keyEquivalent:@""];
-    [menu addItemWithTitle:@"KCRW Music" action:@selector(playSomaFM:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"NRK P3" action:@selector(playNRKP3:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"NRK P13" action:@selector(playNRKP13:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"NRK mP3" action:@selector(playNRKMP3:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"KCRW Music" action:@selector(playKCRW:) keyEquivalent:@""];
+    [_menu addItemWithTitle:@"Soma FM Groove Salad" action:@selector(playSomaFM:) keyEquivalent:@""];
     
-    //[menu addItem:[NSMenuItem separatorItem]];
-    //[menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
-    //[menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
+    //[_menu addItem:[NSMenuItem separatorItem]];
+    //[_menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
+    //[_menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
     
-    [menu addItem:[NSMenuItem separatorItem]];
-    [menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
+    [_menu addItem:[NSMenuItem separatorItem]];
+    [_menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
     
-    [statusItem setMenu:menu];
+    [statusItem setMenu:_menu];
     
     //Play icon
-    NSMenuItem *playItem = [menu itemAtIndex:0];
+    NSMenuItem *playItem = [_menu itemAtIndex:0];
     NSImage *playImage = [NSImage imageNamed:@"play"];
     playImage.template = YES;
     [playItem setImage:playImage];
 
     //Stop icon
-    NSMenuItem *stopItem = [menu itemAtIndex:1];
+    NSMenuItem *stopItem = [_menu itemAtIndex:1];
     NSImage *stopImage = [NSImage imageNamed:@"stop"];
     stopImage.template = YES;
     [stopItem setImage:stopImage];
     
+    //Set up player
     audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
         .enableVolumeMixer = NO
-    } ];
-    
+    }];
     audioPlayer.delegate = self;
     audioPlayer.equalizerEnabled = NO;
     audioPlayer.meteringEnabled = NO;
@@ -84,7 +91,7 @@
     
     //If we were playing the last time we quit, start playing.
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
-        NSLog(@"Auto-starting stream on launch.");
+        NSLog(@"*** Auto-starting stream on launch.");
         [self startPlaying:nil];
     }
 }
@@ -93,106 +100,78 @@
     // Insert code here to tear down your application
 }
 
--(void) rememberPlaybackState:(BOOL)wasPlaying forItem:(id)sender {
-    //Currently remembers play/stop state.
-    //TODO: Should remember which station.
-    [[NSUserDefaults standardUserDefaults] setBool:wasPlaying forKey:@"wasPlaying"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
+-(void) updateMenu:(BOOL)wasPlaying forItem:(id)sender {
 
--(void) updateMenu:(id)sender {
-    [_currentMenuItem setState:NSOffState];
-    [sender setState:NSOnState];
+    NSInteger stationIndex = [_menu indexOfItem:sender];
+    stationIndex = stationIndex - 3; //Change offset to remove play/stop/divider.
+    if (stationIndex >= 0) {
+        
+        //Update menu checkmark
+        [_currentMenuItem setState:NSOffState];
+        [sender setState:NSOnState];
+
+        //Save the currently playing station menu index
+        [[NSUserDefaults standardUserDefaults] setInteger:stationIndex forKey:@"lastPlayingStation"];
+    }
+    
+    //Save playback state
+    [[NSUserDefaults standardUserDefaults] setBool:wasPlaying forKey:@"wasPlaying"];
+
+    //Save the prefs to disk
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
+    NSLog(@"stationIndex: %ld", (long)stationIndex);
+    
     _currentMenuItem = sender;
 }
 
 
 -(void) startPlaying:(id)sender {
-    /*
-     *** NRK Icecast sample playlists MP3 @ 192 kbit/s
-     P3: http://lyd.nrk.no/nrk_radio_p3_mp3_h
-     P13: http://lyd.nrk.no/nrk_radio_p13_mp3_h
-     mP3: http://lyd.nrk.no/nrk_radio_mp3_mp3_h
-     *** NRK Icecast sample streams AAC @ 128kbit/s
-     http://lyd.nrk.no/nrk_radio_mp3_aac_h
-     http://lyd.nrk.no/nrk_radio_p13_aac_h
-     *** KCRW Eclectic24
-     http://newmedia.kcrw.com/legacy/pls/kcrwmusic.pls //oops this doesn't work, I have to find or write a PLS parser! What about M3U?
-     http://kcrw.ic.llnwd.net/stream/kcrw_music // <-- this is the actual stream
-     
-     *** Groove Salad
-     http://somafm.com/groovesalad.pls
-
-     Here is the Groove Salad PLS dumped with curl:
-
-     [playlist]
-     numberofentries=5
-     File1=http://uwstream1.somafm.com:80
-     Title1=SomaFM: Groove Salad (#1 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
-     Length1=-1
-     File2=http://xstream1.somafm.com:8032
-     Title2=SomaFM: Groove Salad (#2 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
-     Length2=-1
-     File3=http://uwstream2.somafm.com:8032
-     Title3=SomaFM: Groove Salad (#3 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
-     Length3=-1
-     File4=http://uwstream3.somafm.com:8032
-     Title4=SomaFM: Groove Salad (#4 128k mp3): A nicely chilled plate of ambient/downtempo beats and grooves.
-     Length4=-1
-     File5=http://ice.somafm.com/groovesalad
-     Title5=SomaFM: Groove Salad (Firewall-friendly 128k mp3) A nicely chilled plate of ambient/downtempo beats and grooves.
-     Length5=-1
-     Version=2
-     
-     */
-    
-    [audioPlayer play:@"http://kcrw.ic.llnwd.net/stream/kcrw_music"];
-    NSLog(@"startPlaying");
-    
-    [self rememberPlaybackState:YES forItem:sender];
+    NSInteger stationIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"stationIndex"];
+    stationIndex += 3;
+    NSString *stationURLString = [_stationList objectAtIndex:stationIndex];
+    NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
+    [audioPlayer playURL:stationURL];
+    [self updateMenu:YES forItem:sender];
 }
 
 
 -(void) playNRKP3:(id)sender {
     //[currentItem setState:NSOffState];
-    [self updateMenu:sender];
-    [self rememberPlaybackState:YES forItem:sender];
-    [audioPlayer playURL:[[NSURL alloc] initWithString:@"http://lyd.nrk.no/nrk_radio_p3_mp3_h"]];
+    [self updateMenu:YES forItem:sender];
+    [audioPlayer playURL:[[NSURL alloc] initWithString:[_stationList objectAtIndex:0]]];
 }
 -(void) playNRKP13:(id)sender {
-    [self updateMenu:sender];
-    [self rememberPlaybackState:YES forItem:sender];
-    [audioPlayer playURL:[[NSURL alloc] initWithString:@"http://lyd.nrk.no/nrk_radio_p13_mp3_h"]];
+    [self updateMenu:YES forItem:sender];
+    [audioPlayer playURL:[[NSURL alloc] initWithString:[_stationList objectAtIndex:1]]];
 }
 -(void) playNRKMP3:(id)sender {
-    [self updateMenu:sender];
-    [self rememberPlaybackState:YES forItem:sender];
-    [audioPlayer playURL:[[NSURL alloc] initWithString:@"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"]];
+    [self updateMenu:YES forItem:sender];
+    [audioPlayer playURL:[[NSURL alloc] initWithString:[_stationList objectAtIndex:2]]];
+}
+-(void) playKCRW:(id)sender {
+    [self updateMenu:YES forItem:sender];
+    [audioPlayer playURL:[[NSURL alloc] initWithString:[_stationList objectAtIndex:3]]];
 }
 -(void) playSomaFM:(id)sender {
-    [self updateMenu:sender];
-    [self rememberPlaybackState:YES forItem:sender];
-    [audioPlayer playURL:[[NSURL alloc] initWithString:@"http://kcrw.ic.llnwd.net/stream/kcrw_music"]];
+    [self updateMenu:YES forItem:sender];
+    [audioPlayer playURL:[[NSURL alloc] initWithString:[_stationList objectAtIndex:4]]];
 }
 
 -(void) switchStation:(id)sender {
     NSLog(@"switchStation called.");
     int stationIndex = 0;
-    NSArray *stationList = @[@"http://lyd.nrk.no/nrk_radio_p3_mp3_h",
-                             @"http://lyd.nrk.no/nrk_radio_p13_mp3_h",
-                             @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h",
-                             @"http://kcrw.ic.llnwd.net/stream/kcrw_music"];
-    NSString *stationURLString = [stationList objectAtIndex:stationIndex];
+    NSString *stationURLString = [_stationList objectAtIndex:stationIndex];
     NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
     [audioPlayer playURL:stationURL];
-    [self rememberPlaybackState:YES forItem:sender];
+    [self updateMenu:YES forItem:sender];
 }
 
 -(void) stopPlaying:(id)sender {
     NSLog(@"stopPlaying called.");
     [audioPlayer stop];
     //Remember playback state
-    [self rememberPlaybackState:NO forItem:nil];
+    //[self rememberPlaybackState:NO forItem:nil];
 }
 
 -(void) showPrefs:(id)sender {
