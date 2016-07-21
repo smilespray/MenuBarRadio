@@ -46,12 +46,10 @@
     //Set up the menu
     _menu = [[NSMenu alloc] init];
     [_menu addItemWithTitle:@"Play" action:@selector(startPlaying:) keyEquivalent:@""];
-
-    
     [_menu addItemWithTitle:@"Stop" action:@selector(stopPlaying:) keyEquivalent:@""];
 
     [_menu addItem:[NSMenuItem separatorItem]];
-    [_menu addItemWithTitle:@"Snorre Milde - Empowering Thingie" action:nil keyEquivalent:@""];
+    [_menu addItemWithTitle:@"Now Playing: -" action:nil keyEquivalent:@""]; //Metadata menu item
     [_menu addItem:[NSMenuItem separatorItem]];
     
     //List of stations (placeholder for now)
@@ -82,6 +80,19 @@
     stopImage.template = YES;
     [stopItem setImage:stopImage];
     
+    //Store reference to ID3 metadata menu item
+    _metaDataMenuItem = [_menu itemAtIndex:3];
+    
+    _currentMetaData = @"Now Playing: -";
+    [statusItem setToolTip:@"MenuBarRadio"];
+
+    //Set up menu item metadata update loop
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:
+                                [self methodSignatureForSelector:@selector(updateMetaDataMenuItem)]];
+    [invocation setTarget:self];
+    [invocation setSelector:@selector(updateMetaDataMenuItem)];
+    [[NSRunLoop mainRunLoop] addTimer:[NSTimer timerWithTimeInterval:1 invocation:invocation repeats:YES] forMode:NSRunLoopCommonModes];
+    
     //Set up player
     audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
         .enableVolumeMixer = NO
@@ -99,8 +110,6 @@
         NSLog(@"*** Auto-starting stream on launch.");
         [self startPlaying:nil];
     }
-    
-    [statusItem setToolTip:@"MenuBarRadio"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
@@ -118,6 +127,10 @@
 }
 
 -(void) updateMenu:(BOOL)wasPlaying forItem:(id)sender {
+    
+    //Clear any metadata
+    _currentMetaData = @"Now Playing: -";
+    [statusItem setToolTip:@""];
 
     NSInteger stationIndex = [_menu indexOfItem:sender];
     stationIndex = stationIndex - 5; //Change offset to remove play/stop/divider.
@@ -186,6 +199,10 @@
 
 -(void) switchStation:(id)sender {
     NSLog(@"switchStation called.");
+
+    _currentMetaData = @"Now Playing: -";
+    [statusItem setToolTip:@""];
+
     int stationIndex = 0;
     NSString *stationURLString = [_stationList objectAtIndex:stationIndex];
     NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
@@ -195,6 +212,10 @@
 
 -(void) stopPlaying:(id)sender {
     NSLog(@"stopPlaying called.");
+    
+    _currentMetaData = @"Now Playing: -";
+    [statusItem setToolTip:@""];
+
     [audioPlayer stop];
     //Remember playback state
     //[self rememberPlaybackState:NO forItem:nil];
@@ -217,6 +238,19 @@
     NSLog(@"logInfo: %@", line);
 }
 
+-(void)audioPlayer:(STKAudioPlayer *)audioPlayer didReadStreamMetadata:(NSDictionary *)dictionary {
+    //_currentMetaData = dictionary[@"StreamTitle"];
+    
+    _currentMetaData = [NSString stringWithFormat:@"Now Playing: %@", dictionary[@"StreamTitle"]];
+    
+    [statusItem setToolTip:_currentMetaData];
+    NSLog(@"ID3 Tag: %@", dictionary[@"StreamTitle"]);
+}
+
+-(void)updateMetaDataMenuItem {
+    //Runs every second!
+    [_metaDataMenuItem setTitle:_currentMetaData];
+}
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
     //NSLog(@"*** didStartPlayingQueueItemId");

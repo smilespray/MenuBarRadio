@@ -17,6 +17,8 @@
 
 @property NSMenu *menu;
 @property NSArray *stationList;
+@property NSMenuItem *metaDataMenuItem;
+@property NSString *currentMetaData;
 
 @property id currentMenuItem;
 
