@@ -33,7 +33,7 @@
     _stationList = @[@"http://lyd.nrk.no/nrk_radio_p3_mp3_h",
                      @"http://lyd.nrk.no/nrk_radio_p13_mp3_h",
                      @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h",
-                     @"http://kcrw.ic.llnwd.net/stream/kcrw_music",
+                     @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes",
                      @"http://ice2.somafm.com/groovesalad-128-aac"];
     
     //Set up the status bar item
@@ -46,7 +46,12 @@
     //Set up the menu
     _menu = [[NSMenu alloc] init];
     [_menu addItemWithTitle:@"Play" action:@selector(startPlaying:) keyEquivalent:@""];
+
+    
     [_menu addItemWithTitle:@"Stop" action:@selector(stopPlaying:) keyEquivalent:@""];
+
+    [_menu addItem:[NSMenuItem separatorItem]];
+    [_menu addItemWithTitle:@"Snorre Milde - Empowering Thingie" action:nil keyEquivalent:@""];
     [_menu addItem:[NSMenuItem separatorItem]];
     
     //List of stations (placeholder for now)
@@ -90,20 +95,32 @@
     //TODO
     
     //If we were playing the last time we quit, start playing.
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
+    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"wasPlaying"]) {
         NSLog(@"*** Auto-starting stream on launch.");
         [self startPlaying:nil];
     }
+    
+    [statusItem setToolTip:@"MenuBarRadio"];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 
+
+-(void)setStatusToolTip:(NSString*)toolTip {
+    /*
+     Usage from another place:
+     AppDelegate* appDelegate=[NSApp delegate];
+     [appDelegate setStatusToolTip:@"new tool tip!"];
+    */
+    [statusItem setToolTip:toolTip];
+}
+
 -(void) updateMenu:(BOOL)wasPlaying forItem:(id)sender {
 
     NSInteger stationIndex = [_menu indexOfItem:sender];
-    stationIndex = stationIndex - 3; //Change offset to remove play/stop/divider.
+    stationIndex = stationIndex - 5; //Change offset to remove play/stop/divider.
     if (stationIndex >= 0) {
         
         //Update menu checkmark
@@ -127,12 +144,21 @@
 
 
 -(void) startPlaying:(id)sender {
+
     NSInteger stationIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@"stationIndex"];
-    stationIndex += 3;
+    NSInteger menuIndex = stationIndex + 5;
+    
     NSString *stationURLString = [_stationList objectAtIndex:stationIndex];
     NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
     [audioPlayer playURL:stationURL];
-    [self updateMenu:YES forItem:sender];
+    
+    if (sender) {
+        NSLog(@"We have a non-nil menu item");
+        [self updateMenu:YES forItem:sender];
+    } else {
+        NSLog(@"We don't have a menu item, will try to look it up.");
+        [self updateMenu:YES forItem:[_menu itemAtIndex:menuIndex]];
+    }
 }
 
 
