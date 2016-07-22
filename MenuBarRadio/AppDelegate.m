@@ -94,6 +94,7 @@ NSString *const kPrefsStationID = @"stationID";
     
     [statusItem setMenu:self.menu];
     
+    //Reference to currently playing station menu item
     self.currentStationMenuItem = nil;
     
     //Play icon
@@ -109,7 +110,7 @@ NSString *const kPrefsStationID = @"stationID";
     [stopItem setImage:stopImage];
     
     //Store reference to ID3 metadata menu item
-    [self updateMetaData:@"-"];
+    [self updateNowPlaying:@"-"];
 
     //Set up player
     audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
@@ -166,7 +167,7 @@ NSString *const kPrefsStationID = @"stationID";
     [audioPlayer stop];
 
     //Clear meta data display
-    [self updateMetaData:@"-"];
+    [self updateNowPlaying:@"-"];
     
     //Clear menu checkmark
     if (self.currentStationMenuItem) {
@@ -184,7 +185,7 @@ NSString *const kPrefsStationID = @"stationID";
     if (sender) {
         
         //Clear meta data display
-        [self updateMetaData:@"-"];
+        [self updateNowPlaying:@"-"];
 
         //Change the menu checkmark
         [self.currentStationMenuItem setState:NSOffState];
@@ -236,16 +237,13 @@ NSString *const kPrefsStationID = @"stationID";
 }
 
 -(void)audioPlayer:(STKAudioPlayer *)audioPlayer didReadStreamMetadata:(NSDictionary *)dictionary {
-
     dispatch_async(dispatch_get_main_queue(), ^{
-        NSString *newMetaData = [NSString stringWithFormat:@"Now Playing: %@", dictionary[@"StreamTitle"]];
-        [self updateMetaData:newMetaData];
+        [self updateNowPlaying:dictionary[@"StreamTitle"]];
     });
-
 }
 
--(void)updateMetaData:(NSString*)metaData {
-    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:metaData];
+-(void)updateNowPlaying:(NSString*)metaData {
+    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:@"Now Playing: %@", metaData]];
     [statusItem setToolTip:metaData];
     NSLog(@"%@", metaData);
 }
