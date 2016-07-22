@@ -50,6 +50,7 @@ NSString *const kPrefsStationID = @"stationID";
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
         @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
         @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
+        @[@"KALX",                      @"http://icecast.media.berkeley.edu:8000/kalx-128.mp3"],
         @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
         @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
         @[@"SomaFM Secret Agent",       @"http://ice1.somafm.com/secretagent-128-aac"],
@@ -148,7 +149,6 @@ NSString *const kPrefsStationID = @"stationID";
     }
 }
 
-
 -(void) handlePlay:(id)sender {
     
     NSMenuItem *item = sender;
@@ -235,6 +235,12 @@ NSString *const kPrefsStationID = @"stationID";
     return [self.stationList[id] objectAtIndex:kStationURL];
 }
 
+-(void)updateNowPlaying:(NSString*)metaData {
+    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:@"Now Playing: %@", metaData]];
+    [statusItem setToolTip:metaData];
+    NSLog(@"%@", metaData);
+}
+
 
 -(void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
@@ -252,6 +258,8 @@ NSString *const kPrefsStationID = @"stationID";
     [stationsWindowsController showWindow:self];
 }
 
+#pragma mark - Audio Player
+
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer logInfo:(NSString*)line {
     NSLog(@"logInfo: %@", line);
 }
@@ -260,12 +268,6 @@ NSString *const kPrefsStationID = @"stationID";
     dispatch_async(dispatch_get_main_queue(), ^{
         [self updateNowPlaying:dictionary[@"StreamTitle"]];
     });
-}
-
--(void)updateNowPlaying:(NSString*)metaData {
-    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:@"Now Playing: %@", metaData]];
-    [statusItem setToolTip:metaData];
-    NSLog(@"%@", metaData);
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
