@@ -45,6 +45,7 @@ NSString *const kPrefsStationID = @"stationID";
     
     //Set up the station list
     self.stationList = @[
+        @[@"dummy",                     @"dummy"],
         @[@"NRK P3",                    @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
         @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
@@ -86,10 +87,12 @@ NSString *const kPrefsStationID = @"stationID";
     
     //Generate menu items for station list
     NSInteger index = 0;
+    
     for (NSArray *station in self.stationList) {
-        //NSLog(@"%@", station);
-        item = [self.menu addItemWithTitle:station[kStationName] action:@selector(playStation:) keyEquivalent:@""];
-        [item setTag:index];
+        if (index > 0) { //Ignore the first element
+            item = [self.menu addItemWithTitle:station[kStationName] action:@selector(playStation:) keyEquivalent:@""];
+            [item setTag:index];
+        }
         index ++;
     }
 
