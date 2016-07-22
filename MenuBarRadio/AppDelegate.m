@@ -18,8 +18,12 @@ static const NSInteger kMenuNowPlaying = -3;
 static const NSInteger kStationName = 0;
 static const NSInteger kStationURL = 1;
 
-NSString *const kPrefsWasPlaying = @"wasPlaying";
-NSString *const kPrefsStationID = @"stationID";
+static NSString *const kPrefsWasPlaying = @"wasPlaying";
+static NSString *const kPrefsStationID = @"stationID";
+
+static NSString *const kLabelNowPlaying = @"Now Playing: %@";
+static NSString *const kLabelBuffering = @"Buffering…";
+
 
 @interface AppDelegate () {
     STKAudioPlayer *audioPlayer;
@@ -81,8 +85,8 @@ NSString *const kPrefsStationID = @"stationID";
 
     [self.menu addItem:[NSMenuItem separatorItem]];
     
-    item = [self.menu addItemWithTitle:@"Now Playing: -" action:nil keyEquivalent:@""]; //Metadata menu item
-    [item setTag:kMenuNowPlaying];
+    //item = [self.menu addItemWithTitle:kLabelNowPlaying action:nil keyEquivalent:@""]; //Metadata menu item
+    //[item setTag:kMenuNowPlaying];
 
     [self.menu addItem:[NSMenuItem separatorItem]];
     
@@ -122,7 +126,7 @@ NSString *const kPrefsStationID = @"stationID";
     [stopItem setImage:stopImage];
     
     //Store reference to ID3 metadata menu item
-    [self updateNowPlaying:@"-"];
+    [self updateNowPlaying:@""];
 
     //Set up player
     audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
@@ -174,11 +178,13 @@ NSString *const kPrefsStationID = @"stationID";
 -(void) handleStop:(id)sender {
     NSLog(@"*** stopPlaying.");
     
+    [self hideNowPlaying];
+    
     //Stop playing
     [audioPlayer stop];
 
     //Clear meta data display
-    [self updateNowPlaying:@"-"];
+    [self updateNowPlaying:@""];
     
     //Clear menu checkmark
     if (self.currentStationMenuItem) {
@@ -195,9 +201,8 @@ NSString *const kPrefsStationID = @"stationID";
     
     if (sender) {
         
-        //Clear meta data display
-        [self updateNowPlaying:@"-"];
-
+        [self showNowPlaying];
+        
         //Change the menu checkmark
         [self.currentStationMenuItem setState:NSOffState];
         [sender setState:NSOnState];
@@ -227,6 +232,28 @@ NSString *const kPrefsStationID = @"stationID";
     }
 }
 
+-(void)showNowPlaying {
+    
+    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuNowPlaying];
+    
+    if (!nowPlayingMenu) {
+        nowPlayingMenu = [self.menu insertItemWithTitle:kLabelBuffering action:nil keyEquivalent:@"" atIndex:3];
+        [nowPlayingMenu setTag:kMenuNowPlaying];
+    } else {
+        [nowPlayingMenu setTitle:kLabelBuffering];
+    }
+}
+
+-(void)hideNowPlaying {
+
+    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuNowPlaying];
+    
+    if (nowPlayingMenu) {
+        [self.menu removeItem:nowPlayingMenu];
+    }
+}
+
+
 -(NSString *)getStationName:(NSInteger)id {
     return [self.stationList[id] objectAtIndex:kStationName];
 }
@@ -236,7 +263,7 @@ NSString *const kPrefsStationID = @"stationID";
 }
 
 -(void)updateNowPlaying:(NSString*)metaData {
-    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:@"Now Playing: %@", metaData]];
+    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:kLabelNowPlaying, metaData]];
     [statusItem setToolTip:metaData];
     NSLog(@"%@", metaData);
 }
