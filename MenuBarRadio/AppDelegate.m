@@ -45,11 +45,19 @@ NSString *const kPrefsStationID = @"stationID";
     
     //Set up the station list
     self.stationList = @[
-        @[@"NRK P3",                @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
-        @[@"NRK P13",               @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
-        @[@"NRK MP13",              @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
-        @[@"KCRW Music",            @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
-        @[@"SomaFM Groove Salad",   @"http://ice2.somafm.com/groovesalad-128-aac"],
+        @[@"NRK P3",                    @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
+        @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
+        @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
+        @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
+        @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
+        @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
+        @[@"SomaFM Secret Agent",       @"http://ice1.somafm.com/secretagent-128-aac"],
+        @[@"SomaFM Deep Space One",     @"http://ice1.somafm.com/deepspaceone-128-aac"],
+        @[@"SomaFM Drone Zone",         @"http://ice1.somafm.com/dronezone-128-aac"],
+        @[@"SomaFM DEF CON Radio",      @"http://ice2.somafm.com/defcon-32-aac"],
+        @[@"SomaFM Left Coast 70s",     @"http://ice1.somafm.com/seventies-128-aac"],
+        @[@"SomaFM Underground 80s",    @"http://ice1.somafm.com/u80s-256-mp3"],
+        @[@"SomaFM Lush",               @"http://ice1.somafm.com/lush-128-aac"],
     ];
     
     //Set up the status bar item
