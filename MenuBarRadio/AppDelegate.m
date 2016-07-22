@@ -11,9 +11,10 @@
 #import "Constants.h"
 #import "RadioStationService.h"
 
-static const NSInteger kMenuPlay = -1;
-static const NSInteger kMenuStop = -2;
-static const NSInteger kMenuNowPlaying = -3;
+static const NSInteger kMenuTagPlay = -1;
+static const NSInteger kMenuTagStop = -2;
+static const NSInteger kMenuTagNowPlaying = -3;
+static const NSInteger kMenuIndexNowPlaying = 3;
 
 static const NSInteger kStationName = 0;
 static const NSInteger kStationURL = 1;
@@ -54,7 +55,6 @@ static NSString *const kLabelBuffering = @"Buffering…";
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
         @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
         @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
-        @[@"KALX",                      @"http://icecast.media.berkeley.edu:8000/kalx-128.mp3"],
         @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
         @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
         @[@"SomaFM Secret Agent",       @"http://ice1.somafm.com/secretagent-128-aac"],
@@ -78,10 +78,10 @@ static NSString *const kLabelBuffering = @"Buffering…";
     self.menu = [[NSMenu alloc] init];
 
     item = [self.menu addItemWithTitle:@"Play" action:@selector(handlePlay:) keyEquivalent:@""];
-    [item setTag:kMenuPlay];
+    [item setTag:kMenuTagPlay];
 
     item = [self.menu addItemWithTitle:@"Stop" action:@selector(handleStop:) keyEquivalent:@""];
-    [item setTag:kMenuStop];
+    [item setTag:kMenuTagStop];
 
     [self.menu addItem:[NSMenuItem separatorItem]];
     
@@ -234,11 +234,11 @@ static NSString *const kLabelBuffering = @"Buffering…";
 
 -(void)showNowPlaying {
     
-    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuNowPlaying];
+    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
     
     if (!nowPlayingMenu) {
-        nowPlayingMenu = [self.menu insertItemWithTitle:kLabelBuffering action:nil keyEquivalent:@"" atIndex:3];
-        [nowPlayingMenu setTag:kMenuNowPlaying];
+        nowPlayingMenu = [self.menu insertItemWithTitle:kLabelBuffering action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
+        [nowPlayingMenu setTag:kMenuTagNowPlaying];
     } else {
         [nowPlayingMenu setTitle:kLabelBuffering];
     }
@@ -246,7 +246,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
 
 -(void)hideNowPlaying {
 
-    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuNowPlaying];
+    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
     
     if (nowPlayingMenu) {
         [self.menu removeItem:nowPlayingMenu];
@@ -263,7 +263,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)updateNowPlaying:(NSString*)metaData {
-    [[self.menu itemWithTag:kMenuNowPlaying] setTitle:[NSString stringWithFormat:kLabelNowPlaying, metaData]];
+    [[self.menu itemWithTag:kMenuTagNowPlaying] setTitle:[NSString stringWithFormat:kLabelNowPlaying, metaData]];
     [statusItem setToolTip:metaData];
     NSLog(@"%@", metaData);
 }
