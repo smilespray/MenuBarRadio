@@ -25,7 +25,6 @@ static NSString *const kPrefsStationID = @"stationID";
 static NSString *const kLabelNowPlaying = @"Now Playing: %@";
 static NSString *const kLabelBuffering = @"Buffering…";
 
-
 @interface AppDelegate () {
     STKAudioPlayer *audioPlayer;
     NSStatusItem *statusItem;
@@ -233,9 +232,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)showNowPlaying {
-    
     NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
-    
     if (!nowPlayingMenu) {
         nowPlayingMenu = [self.menu insertItemWithTitle:kLabelBuffering action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
         [nowPlayingMenu setTag:kMenuTagNowPlaying];
@@ -245,14 +242,11 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)hideNowPlaying {
-
     NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
-    
     if (nowPlayingMenu) {
         [self.menu removeItem:nowPlayingMenu];
     }
 }
-
 
 -(NSString *)getStationName:(NSInteger)id {
     return [self.stationList[id] objectAtIndex:kStationName];
@@ -285,7 +279,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
     [stationsWindowsController showWindow:self];
 }
 
-#pragma mark - Audio Player
+#pragma mark - StreamingKit Audio Player
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer logInfo:(NSString*)line {
     NSLog(@"logInfo: %@", line);
@@ -298,10 +292,12 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
-    //NSLog(@"*** didStartPlayingQueueItemId");
+    //[self updateNowPlaying:@"Buffering…"];
+    NSLog(@"*** didStartPlayingQueueItemId");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId {
+    //[self updateNowPlaying:@"Playing…"];
     //NSLog(@"*** didFinishBufferingSourceWithQueueItemId");
 }
 
