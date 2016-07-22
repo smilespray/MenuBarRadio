@@ -209,7 +209,7 @@ NSString *const kPrefsStationID = @"stationID";
         NSInteger stationID = [sender tag];
         
         //Look up the URL
-        NSString *stationURLString = [self.stationList[stationID] objectAtIndex:kStationURL];
+        NSString *stationURLString = [self getStationURL:stationID];
         NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
 
         //Start playing
@@ -220,14 +220,23 @@ NSString *const kPrefsStationID = @"stationID";
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kPrefsWasPlaying];
         [[NSUserDefaults standardUserDefaults] synchronize];
 
-        NSLog(@"*** playStation: Started playing %@", [self.stationList[stationID] objectAtIndex:kStationName]);
+        NSLog(@"*** playStation: Started playing %@", [self getStationName:stationID]);
     
     } else {
         NSLog(@"*** playStation: Unidentified menu item.");
     }
 }
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
+-(NSString *)getStationName:(NSInteger)id {
+    return [self.stationList[id] objectAtIndex:kStationName];
+}
+
+-(NSString *)getStationURL:(NSInteger)id {
+    return [self.stationList[id] objectAtIndex:kStationURL];
+}
+
+
+-(void)applicationWillTerminate:(NSNotification *)aNotification {
     // Insert code here to tear down your application
 }
 
