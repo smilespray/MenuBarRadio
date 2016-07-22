@@ -15,6 +15,9 @@ static const NSInteger kMenuPlay = -1;
 static const NSInteger kMenuStop = -2;
 static const NSInteger kMenuNowPlaying = -3;
 
+static const NSInteger kStationName = 0;
+static const NSInteger kStationURL = 1;
+
 NSString *const kPrefsWasPlaying = @"wasPlaying";
 NSString *const kPrefsStationID = @"stationID";
 
@@ -41,11 +44,13 @@ NSString *const kPrefsStationID = @"stationID";
     //[self syncRadioStations];
     
     //Set up the station list
-    self.stationList = @[@"http://lyd.nrk.no/nrk_radio_p3_mp3_h",
-                     @"http://lyd.nrk.no/nrk_radio_p13_mp3_h",
-                     @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h",
-                     @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes",
-                     @"http://ice2.somafm.com/groovesalad-128-aac"];
+    self.stationList = @[
+        @[@"NRK P3",                @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
+        @[@"NRK P13",               @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
+        @[@"NRK MP13",              @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
+        @[@"KCRW Music",            @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
+        @[@"SomaFM Groove Salad",   @"http://ice2.somafm.com/groovesalad-128-aac"],
+    ];
     
     //Set up the status bar item
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
@@ -71,22 +76,14 @@ NSString *const kPrefsStationID = @"stationID";
 
     [self.menu addItem:[NSMenuItem separatorItem]];
     
-    //List of stations (placeholder for now)
-
-    item = [self.menu addItemWithTitle:@"NRK P3" action:@selector(playStation:) keyEquivalent:@""];
-    [item setTag:0];
-    
-    item = [self.menu addItemWithTitle:@"NRK P13" action:@selector(playStation:) keyEquivalent:@""];
-    [item setTag:1];
-
-    item = [self.menu addItemWithTitle:@"NRK mP3" action:@selector(playStation:) keyEquivalent:@""];
-    [item setTag:2];
-
-    item = [self.menu addItemWithTitle:@"KCRW Music" action:@selector(playStation:) keyEquivalent:@""];
-    [item setTag:3];
-
-    item = [self.menu addItemWithTitle:@"Soma FM Groove Salad" action:@selector(playStation:) keyEquivalent:@""];
-    [item setTag:4];
+    //Generate menu items for station list
+    NSInteger index = 0;
+    for (NSArray *station in self.stationList) {
+        //NSLog(@"%@", station);
+        item = [self.menu addItemWithTitle:station[kStationName] action:@selector(playStation:) keyEquivalent:@""];
+        [item setTag:index];
+        index ++;
+    }
 
     //[self.menu addItem:[NSMenuItem separatorItem]];
     //[self.menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
@@ -137,7 +134,6 @@ NSString *const kPrefsStationID = @"stationID";
         //Start playing
         [self handlePlay:station];
     }
-
 }
 
 
@@ -161,12 +157,10 @@ NSString *const kPrefsStationID = @"stationID";
     }
     
     [self playStation:item];
-    
-    
 }
 
 -(void) handleStop:(id)sender {
-    NSLog(@"stopPlaying called.");
+    NSLog(@"*** stopPlaying.");
     
     //Stop playing
     [audioPlayer stop];
@@ -184,7 +178,6 @@ NSString *const kPrefsStationID = @"stationID";
     [[NSUserDefaults standardUserDefaults] synchronize];
 
 }
-
 
 -(void) playStation:(id)sender {
     
@@ -204,7 +197,7 @@ NSString *const kPrefsStationID = @"stationID";
         NSInteger stationID = [sender tag];
         
         //Look up the URL
-        NSString *stationURLString = [_stationList objectAtIndex:stationID];
+        NSString *stationURLString = [self.stationList[stationID] objectAtIndex:kStationURL];
         NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
 
         //Start playing
@@ -215,9 +208,10 @@ NSString *const kPrefsStationID = @"stationID";
         [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kPrefsWasPlaying];
         [[NSUserDefaults standardUserDefaults] synchronize];
 
+        NSLog(@"*** playStation: Started playing %@", [self.stationList[stationID] objectAtIndex:kStationName]);
     
     } else {
-        NSLog(@"playStation: Unidentified menu item.");
+        NSLog(@"*** playStation: Unidentified menu item.");
     }
 }
 
