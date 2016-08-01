@@ -18,7 +18,7 @@
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="196" y="240" width="356" height="266"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1200"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
             <view key="contentView" id="se5-gp-TjO">
                 <rect key="frame" x="0.0" y="0.0" width="356" height="266"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -74,8 +74,8 @@
                                     </textFieldCell>
                                 </textField>
                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqc-kg-BHd">
-                                    <rect key="frame" x="14" y="58" width="177" height="17"/>
-                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Time spent on this station:" id="Xhs-ir-goH">
+                                    <rect key="frame" x="14" y="58" width="189" height="17"/>
+                                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="left" title="Time spent listening to this station:" id="Xhs-ir-goH">
                                         <font key="font" metaFont="smallSystem"/>
                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>

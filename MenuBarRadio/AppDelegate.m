@@ -195,8 +195,8 @@ static NSString *const kLabelBuffering = @"Buffering…";
     //Stop playing
     [self.audioPlayer stop];
 
-    //Clear meta data display
-    [self updateNowPlaying:@""];
+    //Remove meta data display
+    [self hideNowPlaying];
     
     //Clear menu checkmark
     if (self.currentStationMenuItem) {
@@ -394,6 +394,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
             NSLog(@"**************** BUFFERING ***********");
             [self changeStatusItem:@"radio-buffering"];
             self.buffering = YES;
+            [self hideNowPlaying];
             break;
         case STKAudioPlayerStatePlaying:
             self.buffering = NO;
@@ -405,6 +406,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
             NSLog(@"**************** STOPPED ***********");
             [self changeStatusItem:@"MenuBarIcon"];
             self.buffering = NO;
+            [self hideNowPlaying];
            break;
         case STKAudioPlayerStateError:
             NSLog(@"**************** ERROR ***********");
