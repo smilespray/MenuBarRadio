@@ -10,6 +10,9 @@
 
 #import "Constants.h"
 #import "RadioStationService.h"
+#import "PrefsWindowController.h"
+#import "StationWindowController.h"
+#import "AboutWindowController.h"
 
 static const NSInteger kMenuTagPlay = -1;
 static const NSInteger kMenuTagStop = -2;
@@ -21,19 +24,19 @@ static const NSInteger kStationURL = 1;
 
 static NSString *const kPrefsWasPlaying = @"wasPlaying";
 static NSString *const kPrefsStationID = @"stationID";
+static NSString *const kStationSwitchCount = @"stationSwitchCount";
 
 static NSString *const kLabelNowPlaying = @"Now Playing: %@";
 static NSString *const kLabelBuffering = @"Buffering…";
 
 @interface AppDelegate () {
-    STKAudioPlayer *audioPlayer;
-    NSStatusItem *statusItem;
+    //NSStatusItem *statusItem;
     NSWindowController *prefsWindowController;
+    NSWindowController *aboutWindowController;
     NSWindowController *stationsWindowsController;
 }
 
 @property (strong, nonatomic) NSMenu *menu;
-@property (strong, nonatomic) NSArray *stationList;
 @property (weak, nonatomic) NSMenuItem *currentStationMenuItem;
 
 - (void)syncRadioStations;
@@ -66,11 +69,17 @@ static NSString *const kLabelBuffering = @"Buffering…";
     ];
     
     //Set up the status bar item
-    statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    //[self changeStatusItem:@"MenuBarIcon"];
+    
+    self.buffering = NO;
+    
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    
     NSImage *statusImage = [NSImage imageNamed:@"MenuBarIcon"];
     statusImage.template = YES;
-    [statusItem setImage:statusImage];
-    [statusItem setHighlightMode:YES];
+    [self.statusItem setImage:statusImage];
+    [self.statusItem setHighlightMode:YES];
+    
     
     //Set up the menu
     NSMenuItem *item;
@@ -100,14 +109,15 @@ static NSString *const kLabelBuffering = @"Buffering…";
         index ++;
     }
 
-    //[self.menu addItem:[NSMenuItem separatorItem]];
-    //[self.menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
-    //[self.menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
+    [self.menu addItem:[NSMenuItem separatorItem]];
+    [self.menu addItemWithTitle:@"About" action:@selector(showAbout:) keyEquivalent:@""];
+    [self.menu addItemWithTitle:@"Edit Station List…" action:@selector(showEditStations:) keyEquivalent:@""];
+    [self.menu addItemWithTitle:@"Preferences…" action:@selector(showPrefs:) keyEquivalent:@""];
     
     [self.menu addItem:[NSMenuItem separatorItem]];
     [self.menu addItemWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@""];
     
-    [statusItem setMenu:self.menu];
+    [self.statusItem setMenu:self.menu];
     
     //Reference to currently playing station menu item
     self.currentStationMenuItem = nil;
@@ -128,17 +138,20 @@ static NSString *const kLabelBuffering = @"Buffering…";
     [self updateNowPlaying:@""];
 
     //Set up player
-    audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
-        .enableVolumeMixer = NO
+    self.audioPlayer = [[STKAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){
+        .enableVolumeMixer = NO,
+        .secondsRequiredToStartPlaying = 1
     }];
-    audioPlayer.delegate = self;
-    audioPlayer.equalizerEnabled = NO;
-    audioPlayer.meteringEnabled = NO;
-    audioPlayer.volume = 1.0f;
+    self.audioPlayer.delegate = self;
+    self.audioPlayer.equalizerEnabled = NO;
+    self.audioPlayer.meteringEnabled = NO;
+    self.audioPlayer.volume = 1.0f;
 
     //Dump the preferences
     //NSLog(@"*** DEFAULTS:\n %@", [[NSUserDefaults standardUserDefaults] dictionaryRepresentation]);
 
+    self.stationSwitchCount = [[NSUserDefaults standardUserDefaults] integerForKey:kStationSwitchCount];
+    
     //If we were playing the last time we quit, start playing.
     if ([[NSUserDefaults standardUserDefaults] boolForKey:kPrefsWasPlaying]) {
         NSLog(@"*** Auto-starting stream on launch.");
@@ -180,7 +193,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
     [self hideNowPlaying];
     
     //Stop playing
-    [audioPlayer stop];
+    [self.audioPlayer stop];
 
     //Clear meta data display
     [self updateNowPlaying:@""];
@@ -196,15 +209,45 @@ static NSString *const kLabelBuffering = @"Buffering…";
 
 }
 
+
+
+/*
+
+    //How to use IntervalAnimator:
+
+    //create IntervalAnimator object
+     animator = [[IntervalAnimator alloc] init];
+    [animator setDelegate:self];
+    [animator setNumberOfFrames:9];
+    [animator startAnimating];
+
+    //...then, eventually:
+    [animator startAnimating];
+ 
+
+    //Implement this protocol method:
+-(void)onUpdate {
+    [animator setCurrentFrame:([animator currentFrame] + 1)%[animator numberOfFrames]];
+    NSImage* image = [NSImage imageNamed:[NSString stringWithFormat:@"icon%ld", (long)[animator currentFrame]]];
+    [statusItem setImage:image];
+}
+
+*/
+
+
 -(void) playStation:(id)sender {
     
     if (sender) {
-        
-        [self showNowPlaying];
-        
+
         //Change the menu checkmark
         [self.currentStationMenuItem setState:NSOffState];
         [sender setState:NSOnState];
+        
+        //Keep count of station changes for the About statistics
+        if (self.currentStationMenuItem && self.currentStationMenuItem != sender) {
+            self.stationSwitchCount ++;
+            [[NSUserDefaults standardUserDefaults] setInteger:self.stationSwitchCount forKey:kStationSwitchCount];
+        }
         
         //Remember currently playing station for next station switch
         self.currentStationMenuItem = sender;
@@ -217,7 +260,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
         NSURL *stationURL = [[NSURL alloc] initWithString:stationURLString];
 
         //Start playing
-        [audioPlayer playURL:stationURL];
+        [self.audioPlayer playURL:stationURL];
         
         //Save prefs for station ID and playback boolean state
         [[NSUserDefaults standardUserDefaults] setInteger:stationID forKey:kPrefsStationID];
@@ -232,12 +275,8 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)showNowPlaying {
-    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
-    if (!nowPlayingMenu) {
-        nowPlayingMenu = [self.menu insertItemWithTitle:kLabelBuffering action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
-        [nowPlayingMenu setTag:kMenuTagNowPlaying];
-    } else {
-        [nowPlayingMenu setTitle:kLabelBuffering];
+    if (!self.buffering) {
+        
     }
 }
 
@@ -257,25 +296,47 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)updateNowPlaying:(NSString*)metaData {
-    [[self.menu itemWithTag:kMenuTagNowPlaying] setTitle:[NSString stringWithFormat:kLabelNowPlaying, metaData]];
-    [statusItem setToolTip:metaData];
-    NSLog(@"%@", metaData);
+    
+    NSString *nowPlaying = [NSString stringWithFormat:kLabelNowPlaying, metaData];
+    
+    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
+
+    if (!nowPlayingMenu) {
+        nowPlayingMenu = [self.menu insertItemWithTitle:nowPlaying action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
+        [nowPlayingMenu setTag:kMenuTagNowPlaying];
+    } else {
+        [nowPlayingMenu setTitle:nowPlaying];
+    }
+    
+    [self.statusItem setToolTip:nowPlaying];
+
 }
 
-
 -(void)applicationWillTerminate:(NSNotification *)aNotification {
+
     // Insert code here to tear down your application
+    
+    
+    //TODO: Persist total number of seconds played
+    //TODO: Persist total stations switched
+    
+}
+
+#pragma mark - About/Prefs/Stations
+
+-(void) showAbout:(id)sender {
+    aboutWindowController = [[AboutWindowController alloc] initWithWindowNibName:@"About"];
+    [aboutWindowController showWindow:self];
+    [aboutWindowController.window makeKeyAndOrderFront:nil];
 }
 
 -(void) showPrefs:(id)sender {
-    NSLog(@"showPrefs");
-    prefsWindowController = [[NSWindowController alloc] initWithWindowNibName:@"Prefs"];
+    prefsWindowController = [[PrefsWindowController alloc] initWithWindowNibName:@"Prefs"];
     [prefsWindowController showWindow:self];
 }
 
 -(void) showEditStations:(id)sender {
-    NSLog(@"showEditStations");
-    stationsWindowsController = [[NSWindowController alloc] initWithWindowNibName:@"Stations"];
+    stationsWindowsController = [[StationWindowController alloc] initWithWindowNibName:@"Stations"];
     [stationsWindowsController showWindow:self];
 }
 
@@ -292,8 +353,9 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
+
     //[self updateNowPlaying:@"Buffering…"];
-    NSLog(@"*** didStartPlayingQueueItemId");
+    //NSLog(@"*** didStartPlayingQueueItemId");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId {
@@ -301,9 +363,62 @@ static NSString *const kLabelBuffering = @"Buffering…";
     //NSLog(@"*** didFinishBufferingSourceWithQueueItemId");
 }
 
+
+-(void) changeStatusItem:(NSString*)imageName {
+    //statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    NSImage *statusImage = [NSImage imageNamed:imageName];
+    statusImage.template = YES;
+    [self.statusItem setImage:statusImage];
+    [self.statusItem setHighlightMode:YES];
+}
+
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer stateChanged:(STKAudioPlayerState)state previousState:(STKAudioPlayerState)previousState {
     //Handle state changes, update the menu etc?
-    //NSLog(@"*** stateChanged");
+    
+    /*
+     
+     //Available states
+     
+     STKAudioPlayerStateReady,
+     STKAudioPlayerStateRunning = 1,
+     STKAudioPlayerStatePlaying = (1 << 1) | STKAudioPlayerStateRunning,
+     STKAudioPlayerStateBuffering = (1 << 2) | STKAudioPlayerStateRunning,
+     STKAudioPlayerStatePaused = (1 << 3) | STKAudioPlayerStateRunning,
+     STKAudioPlayerStateStopped = (1 << 4),
+     STKAudioPlayerStateError = (1 << 5),
+     STKAudioPlayerStateDisposed = (1 << 6)
+     */
+    
+    switch (state) {
+        case STKAudioPlayerStateBuffering:
+            NSLog(@"**************** BUFFERING ***********");
+            [self changeStatusItem:@"radio-buffering"];
+            self.buffering = YES;
+            break;
+        case STKAudioPlayerStatePlaying:
+            self.buffering = NO;
+            [self showNowPlaying];
+            NSLog(@"**************** PLAYING ***********");
+            [self changeStatusItem:@"MenuBarIcon"];
+            break;
+        case STKAudioPlayerStateStopped:
+            NSLog(@"**************** STOPPED ***********");
+            [self changeStatusItem:@"MenuBarIcon"];
+            self.buffering = NO;
+           break;
+        case STKAudioPlayerStateError:
+            NSLog(@"**************** ERROR ***********");
+            [self changeStatusItem:@"MenuBarIcon"];
+            self.buffering = NO;
+            break;
+        default:
+            NSLog(@"**************** unknown state ***********");
+            [self changeStatusItem:@"MenuBarIcon"];
+            self.buffering = NO;
+            break;
+    }
+    
+    NSLog(@"*** stateChanged");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishPlayingQueueItemId:(NSObject*)queueItemId withReason:(STKAudioPlayerStopReason)stopReason andProgress:(double)progress andDuration:(double)duration {
@@ -314,6 +429,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer unexpectedError:(STKAudioPlayerErrorCode)errorCode {
     NSLog(@"*** unexpectedError!");
 }
+
 
 #pragma mark - Radio Stations
 

@@ -23,8 +23,13 @@
 		1A097A4B1AFBF0120024CF8F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A097A4A1AFBF0120024CF8F /* Images.xcassets */; };
 		1A097A4E1AFBF0120024CF8F /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A097A4C1AFBF0120024CF8F /* MainMenu.xib */; };
 		1A097A5A1AFBF0120024CF8F /* MenuBarRadioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */; };
-		1AE5DF2E1AFC955A00E27183 /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2D1AFC955A00E27183 /* Prefs.xib */; };
-		1AE5DF301AFC96B400E27183 /* Stations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AE5DF2F1AFC96B400E27183 /* Stations.xib */; };
+		1AA2BDE31D4E08C3009E8B2F /* IntervalAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2BDE21D4E08C3009E8B2F /* IntervalAnimator.m */; };
+		1AA2BDEA1D4E1256009E8B2F /* PrefsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2BDE81D4E1256009E8B2F /* PrefsWindowController.m */; };
+		1AA2BDEB1D4E1256009E8B2F /* Prefs.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2BDE91D4E1256009E8B2F /* Prefs.xib */; };
+		1AA2BDF11D4E205C009E8B2F /* StationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2BDEF1D4E205C009E8B2F /* StationWindowController.m */; };
+		1AA2BDF21D4E205C009E8B2F /* Stations.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2BDF01D4E205C009E8B2F /* Stations.xib */; };
+		1AA2BDFB1D4E3755009E8B2F /* AboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA2BDF91D4E3755009E8B2F /* AboutWindowController.m */; };
+		1AA2BDFC1D4E3755009E8B2F /* About.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AA2BDFA1D4E3755009E8B2F /* About.xib */; };
 		63E03A5ABD20F65C8A9BC6CF /* libPods-MenuBarRadio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DE9D2096B1EB3DE5D2251FF /* libPods-MenuBarRadio.a */; };
 		BC607462BAB3B87188AD67A4 /* libPods-MenuBarRadioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A59E8B73DBC5401992C5D2E /* libPods-MenuBarRadioTests.a */; };
 /* End PBXBuildFile section */
@@ -71,8 +76,18 @@
 		1A097A531AFBF0120024CF8F /* Menu Bar Radio Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Menu Bar Radio Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A097A581AFBF0120024CF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A097A591AFBF0120024CF8F /* MenuBarRadioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuBarRadioTests.m; sourceTree = "<group>"; };
-		1AE5DF2D1AFC955A00E27183 /* Prefs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
-		1AE5DF2F1AFC96B400E27183 /* Stations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Stations.xib; sourceTree = "<group>"; };
+		1AA2BDE11D4E08C3009E8B2F /* IntervalAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntervalAnimator.h; sourceTree = "<group>"; };
+		1AA2BDE21D4E08C3009E8B2F /* IntervalAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntervalAnimator.m; sourceTree = "<group>"; };
+		1AA2BDE71D4E1256009E8B2F /* PrefsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsWindowController.h; sourceTree = "<group>"; };
+		1AA2BDE81D4E1256009E8B2F /* PrefsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsWindowController.m; sourceTree = "<group>"; };
+		1AA2BDE91D4E1256009E8B2F /* Prefs.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Prefs.xib; sourceTree = "<group>"; };
+		1AA2BDEE1D4E205C009E8B2F /* StationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationWindowController.h; sourceTree = "<group>"; };
+		1AA2BDEF1D4E205C009E8B2F /* StationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationWindowController.m; sourceTree = "<group>"; };
+		1AA2BDF01D4E205C009E8B2F /* Stations.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Stations.xib; sourceTree = "<group>"; };
+		1AA2BDF81D4E3755009E8B2F /* AboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutWindowController.h; sourceTree = "<group>"; };
+		1AA2BDF91D4E3755009E8B2F /* AboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutWindowController.m; sourceTree = "<group>"; };
+		1AA2BDFA1D4E3755009E8B2F /* About.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = About.xib; sourceTree = "<group>"; };
+		1AA824691D4FEF0E0021DCB8 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7419BC08588364954DB91468 /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadio.release.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadio/Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
 		7DE9D2096B1EB3DE5D2251FF /* libPods-MenuBarRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82AAC43D6D1D35E95B80D781 /* Pods-MenuBarRadioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuBarRadioTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuBarRadioTests/Pods-MenuBarRadioTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +139,8 @@
 		1A097A421AFBF0120024CF8F /* MenuBarRadio */ = {
 			isa = PBXGroup;
 			children = (
+				1AA2BDE11D4E08C3009E8B2F /* IntervalAnimator.h */,
+				1AA2BDE21D4E08C3009E8B2F /* IntervalAnimator.m */,
 				1A097A451AFBF0120024CF8F /* AppDelegate.h */,
 				1A097A461AFBF0120024CF8F /* AppDelegate.m */,
 				0B1BA7D81AFD61B500592F5A /* Constants.h */,
@@ -148,10 +165,17 @@
 				0B1BA7DF1AFE8D7900592F5A /* ManagedObjectContextObject.m */,
 				1A097A4A1AFBF0120024CF8F /* Images.xcassets */,
 				1A097A4C1AFBF0120024CF8F /* MainMenu.xib */,
-				1AE5DF2D1AFC955A00E27183 /* Prefs.xib */,
-				1AE5DF2F1AFC96B400E27183 /* Stations.xib */,
 				0B1BA7971AFD527100592F5A /* MenuBarRadio.xcdatamodeld */,
 				1A097A431AFBF0120024CF8F /* Supporting Files */,
+				1AA2BDE71D4E1256009E8B2F /* PrefsWindowController.h */,
+				1AA2BDE81D4E1256009E8B2F /* PrefsWindowController.m */,
+				1AA2BDE91D4E1256009E8B2F /* Prefs.xib */,
+				1AA2BDEE1D4E205C009E8B2F /* StationWindowController.h */,
+				1AA2BDEF1D4E205C009E8B2F /* StationWindowController.m */,
+				1AA2BDF01D4E205C009E8B2F /* Stations.xib */,
+				1AA2BDF81D4E3755009E8B2F /* AboutWindowController.h */,
+				1AA2BDF91D4E3755009E8B2F /* AboutWindowController.m */,
+				1AA2BDFA1D4E3755009E8B2F /* About.xib */,
 			);
 			path = MenuBarRadio;
 			sourceTree = "<group>";
@@ -161,6 +185,7 @@
 			children = (
 				1A097A441AFBF0120024CF8F /* Info.plist */,
 				1A097A481AFBF0120024CF8F /* main.m */,
+				1AA824691D4FEF0E0021DCB8 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,9 +313,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AE5DF2E1AFC955A00E27183 /* Prefs.xib in Resources */,
+				1AA2BDEB1D4E1256009E8B2F /* Prefs.xib in Resources */,
 				1A097A4B1AFBF0120024CF8F /* Images.xcassets in Resources */,
-				1AE5DF301AFC96B400E27183 /* Stations.xib in Resources */,
+				1AA2BDF21D4E205C009E8B2F /* Stations.xib in Resources */,
+				1AA2BDFC1D4E3755009E8B2F /* About.xib in Resources */,
 				1A097A4E1AFBF0120024CF8F /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,11 +429,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B1BA7ED1AFEB99A00592F5A /* StoreSettings.m in Sources */,
+				1AA2BDEA1D4E1256009E8B2F /* PrefsWindowController.m in Sources */,
+				1AA2BDF11D4E205C009E8B2F /* StationWindowController.m in Sources */,
 				0B1BA7D41AFD5AC000592F5A /* DAO.m in Sources */,
 				0B1BA7D71AFD5ADE00592F5A /* RadioStationDAO.m in Sources */,
 				1A097A491AFBF0120024CF8F /* main.m in Sources */,
 				0B1BA7DA1AFD61B500592F5A /* Constants.m in Sources */,
+				1AA2BDE31D4E08C3009E8B2F /* IntervalAnimator.m in Sources */,
 				0B1BA7E01AFE8D7900592F5A /* ManagedObjectContextObject.m in Sources */,
+				1AA2BDFB1D4E3755009E8B2F /* AboutWindowController.m in Sources */,
 				0B1BA7991AFD527100592F5A /* MenuBarRadio.xcdatamodeld in Sources */,
 				0B1BA7CF1AFD5A4100592F5A /* RadioStationService.m in Sources */,
 				0B1BA7E41AFEAF6100592F5A /* RadioStation+Extensions.m in Sources */,
@@ -474,6 +504,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -516,6 +547,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
