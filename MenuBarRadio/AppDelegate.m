@@ -56,7 +56,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
         @[@"NRK P3",                    @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
         @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
-        @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_128k_aac_e24_itunes"],
+        @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_192k_mp3_e24_internet_radio"],
         @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
         @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
         @[@"SomaFM Secret Agent",       @"http://ice1.somafm.com/secretagent-128-aac"],
@@ -285,6 +285,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
     if (nowPlayingMenu) {
         [self.menu removeItem:nowPlayingMenu];
     }
+    [self.statusItem setToolTip:@""];
 }
 
 -(NSString *)getStationName:(NSInteger)id {
@@ -412,11 +413,13 @@ static NSString *const kLabelBuffering = @"Buffering…";
             NSLog(@"**************** ERROR ***********");
             [self changeStatusItem:@"MenuBarIcon"];
             self.buffering = NO;
+            [self hideNowPlaying];
             break;
         default:
             NSLog(@"**************** unknown state ***********");
             [self changeStatusItem:@"MenuBarIcon"];
             self.buffering = NO;
+            [self hideNowPlaying];
             break;
     }
     
