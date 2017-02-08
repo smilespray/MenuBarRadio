@@ -55,7 +55,7 @@ static NSString *const kLabelBuffering = @"Buffering…";
         @[@"dummy",                     @"dummy"],
         @[@"NRK P3",                    @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
-        @[@"NRK MP13",                  @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
+        @[@"NRK MP3",                   @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
         @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_192k_mp3_e24_internet_radio"],
         @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
         @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
