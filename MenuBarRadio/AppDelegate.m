@@ -56,7 +56,8 @@ static NSString *const kLabelBuffering = @"Buffering…";
         @[@"NRK P3",                    @"http://lyd.nrk.no/nrk_radio_p3_mp3_h"],
         @[@"NRK P13",                   @"http://lyd.nrk.no/nrk_radio_p13_mp3_h"],
         @[@"NRK MP3",                   @"http://lyd.nrk.no/nrk_radio_mp3_mp3_h"],
-        @[@"KCRW Music",                @"http://kcrw.streamguys1.com/kcrw_192k_mp3_e24_internet_radio"],
+        @[@"KCRW Live",                 @"http://kcrw.streamguys1.com/kcrw_192k_mp3_on_air_internet_radio"],
+        @[@"KCRW Eclectic 24",          @"http://kcrw.streamguys1.com/kcrw_192k_mp3_e24_internet_radio"],
         @[@"SomaFM Groove Salad",       @"http://ice2.somafm.com/groovesalad-128-aac"],
         @[@"SomaFM Fluid",              @"http://ice1.somafm.com/fluid-128-aac"],
         @[@"SomaFM Secret Agent",       @"http://ice1.somafm.com/secretagent-128-aac"],
@@ -298,18 +299,20 @@ static NSString *const kLabelBuffering = @"Buffering…";
 
 -(void)updateNowPlaying:(NSString*)metaData {
     
-    NSString *nowPlaying = [NSString stringWithFormat:kLabelNowPlaying, metaData];
-    
-    NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSString *nowPlaying = [NSString stringWithFormat:kLabelNowPlaying, metaData];
+        
+        NSMenuItem *nowPlayingMenu = [self.menu itemWithTag:kMenuTagNowPlaying];
 
-    if (!nowPlayingMenu) {
-        nowPlayingMenu = [self.menu insertItemWithTitle:nowPlaying action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
-        [nowPlayingMenu setTag:kMenuTagNowPlaying];
-    } else {
-        [nowPlayingMenu setTitle:nowPlaying];
-    }
-    
-    [self.statusItem setToolTip:nowPlaying];
+        if (!nowPlayingMenu) {
+            nowPlayingMenu = [self.menu insertItemWithTitle:nowPlaying action:nil keyEquivalent:@"" atIndex:kMenuIndexNowPlaying];
+            [nowPlayingMenu setTag:kMenuTagNowPlaying];
+        } else {
+            [nowPlayingMenu setTitle:nowPlaying];
+        }
+        
+        [self.statusItem setToolTip:nowPlaying];
+    });
 
 }
 
@@ -348,19 +351,17 @@ static NSString *const kLabelBuffering = @"Buffering…";
 }
 
 -(void)audioPlayer:(STKAudioPlayer *)audioPlayer didReadStreamMetadata:(NSDictionary *)dictionary {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self updateNowPlaying:dictionary[@"StreamTitle"]];
-    });
+    [self updateNowPlaying:dictionary[@"StreamTitle"]];
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didStartPlayingQueueItemId:(NSObject*)queueItemId {
 
-    //[self updateNowPlaying:@"Buffering…"];
+    [self updateNowPlaying:@"…"];
     //NSLog(@"*** didStartPlayingQueueItemId");
 }
 
 -(void) audioPlayer:(STKAudioPlayer*)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject*)queueItemId {
-    //[self updateNowPlaying:@"Playing…"];
+    [self updateNowPlaying:@"…"];
     //NSLog(@"*** didFinishBufferingSourceWithQueueItemId");
 }
 
