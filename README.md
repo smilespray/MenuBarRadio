@@ -1,10 +1,10 @@
 # MenuBarRadio
 The simplest menu bar radio app for Mac OS X.
 
-## One Feature
+### One Feature
 - Internet radio while you work.
 
-## Many Unfeatures
+### Many Unfeatures
 - No volume control
 - No EQ
 - No Recording
@@ -16,9 +16,9 @@ The simplest menu bar radio app for Mac OS X.
 - No registration
 - No spam
 
-###Version 1 TODO List###
+## Version 1 TODO List
 
-####DONE####
+### DONE
 - DONE Ditch app window with play, stop and volume controls
 - DONE Temporary menu bar icon
 - DONE Set up bare-bones menu bar menu
@@ -26,7 +26,7 @@ The simplest menu bar radio app for Mac OS X.
 - DONE Set LSUIElement in Info.plist
 - DONE Remember last playback state (starts playing on launch if it played on quit)
 
-####TODO####
+### TODO
 - Change stations
 - Simple list of stations (name and URL)
     - Data structure for retaining stations
@@ -43,7 +43,7 @@ The simplest menu bar radio app for Mac OS X.
 - Remember last station played
 - Launch app on login
 
-###Version 2 plans###
+## Version 2 plans
 - Simple station browser (based on Shoutcast or better third-party source)
 	- Browse by region
 	- Browse by genre
