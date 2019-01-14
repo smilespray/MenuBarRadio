@@ -18,7 +18,7 @@ The simplest menu bar radio app for Mac OS X.
 
 ## Version 1 TODO List
 
-### DONE
+### Done
 - DONE Ditch app window with play, stop and volume controls
 - DONE Temporary menu bar icon
 - DONE Set up bare-bones menu bar menu
@@ -26,7 +26,7 @@ The simplest menu bar radio app for Mac OS X.
 - DONE Set LSUIElement in Info.plist
 - DONE Remember last playback state (starts playing on launch if it played on quit)
 
-### TODO
+### To do
 - Change stations
 - Simple list of stations (name and URL)
     - Data structure for retaining stations
