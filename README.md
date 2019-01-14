@@ -16,7 +16,7 @@ The simplest menu bar radio app for Mac OS X.
 - No registration
 - No spam
 
-## Version 1 TODO List
+## Version 1 to do List
 
 ### Done
 - DONE Ditch app window with play, stop and volume controls
