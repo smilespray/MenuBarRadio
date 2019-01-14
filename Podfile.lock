@@ -1,12 +1,12 @@
 PODS:
-  - StreamingKit (0.1.29)
+  - StreamingKit (0.1.30)
 
 DEPENDENCIES:
   - StreamingKit (>= 0.1.25)
 
 SPEC CHECKSUMS:
-  StreamingKit: c329785aaef3ac142d4ae388345bfe1ed23cfd45
+  StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
 
 PODFILE CHECKSUM: 28d173d1111cb229354811d1dd0f5de91faddb5e
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.4.0

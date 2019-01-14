@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <CoreAudio/CoreAudio.h>
 #import "STKAudioPlayer.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate, STKAudioPlayerDelegate> {

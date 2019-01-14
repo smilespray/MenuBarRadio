@@ -64,9 +64,11 @@ static NSString *const kLabelBuffering = @"Buffering…";
         @[@"SomaFM Deep Space One",     @"http://ice1.somafm.com/deepspaceone-128-aac"],
         @[@"SomaFM Drone Zone",         @"http://ice1.somafm.com/dronezone-128-aac"],
         @[@"SomaFM DEF CON Radio",      @"http://ice2.somafm.com/defcon-32-aac"],
-        @[@"SomaFM Left Coast 70s",     @"http://ice1.somafm.com/seventies-128-aac"],
+        @[@"SomaFM Left Coast 70s",     @"http://ice1.somafm.com/seventies-320-mp3"],
         @[@"SomaFM Underground 80s",    @"http://ice1.somafm.com/u80s-256-mp3"],
         @[@"SomaFM Lush",               @"http://ice1.somafm.com/lush-128-aac"],
+        @[@"DFM",                       @"http://stereo.dfm.nu"],
+        @[@"KEXP",                      @"http://live-mp3-128.kexp.org/"],
     ];
     
     //Set up the status bar item
@@ -216,22 +218,20 @@ static NSString *const kLabelBuffering = @"Buffering…";
 
     //How to use IntervalAnimator:
 
-    //create IntervalAnimator object
-     animator = [[IntervalAnimator alloc] init];
-    [animator setDelegate:self];
-    [animator setNumberOfFrames:9];
-    [animator startAnimating];
-
-    //...then, eventually:
-    [animator startAnimating];
+//create IntervalAnimator object
+animator = [[IntervalAnimator alloc] init];
+[animator setDelegate:self];
+[animator setNumberOfFrames:9];
+[animator startAnimating];
  
 
     //Implement this protocol method:
--(void)onUpdate {
+-(void)onUpdate    {
     [animator setCurrentFrame:([animator currentFrame] + 1)%[animator numberOfFrames]];
     NSImage* image = [NSImage imageNamed:[NSString stringWithFormat:@"icon%ld", (long)[animator currentFrame]]];
     [statusItem setImage:image];
 }
+
 
 */
 
