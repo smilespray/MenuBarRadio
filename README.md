@@ -1,10 +1,10 @@
 # MenuBarRadio
 The simplest menu bar radio app for Mac OS X.
 
-##One Feature
+## One Feature
 - Internet radio while you work.
 
-##Many Unfeatures
+## Many Unfeatures
 - No volume control
 - No EQ
 - No Recording
