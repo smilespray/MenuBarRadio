@@ -7,283 +7,274 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02E74BD1B5A18D40F1088C2599651352 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4CC5BE18B22F29E8AD01A528C2B465 /* AudioToolbox.framework */; };
-		17AF1A5771C9BAA9AC6BC8BB5392CC04 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1F1D8D32956CA5CA147D062B4366B719 /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		259D46229B4C598A8F25FE3446B6AEF6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF6D2EA33FA7904ECD8148707DCFD6 /* Cocoa.framework */; };
-		37CCFE2BAE316AC9FE0F35AFCDD442D9 /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3D9BFCB65CEA644B4FBB0D232AED0E41 /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3DCDDA258C92F59BABEAB8EB8FE2CB7A /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3E868602AD603E46F6606018ED561E1B /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4501C1506664151D1A2A1CA5CF561264 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		48E851F6F20C3A635F6F997F02E784A1 /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		52DD3060F4611400D5FE0BDDB499018B /* AudioUnit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB25EE26E0DBA050282E199EB2B26CB5 /* AudioUnit.framework */; };
-		65BC8AA86DE2A05F08CCB49D64C9C4AD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1621D5D3063301F030BF2A1BBDC503 /* CFNetwork.framework */; };
-		6D53184330B0F3C269E0779DCE515C7F /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7B92E6554A7EAF0D0C1D00BAED15B964 /* StreamingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */; };
-		7F61CAAE6CD73B370D6B2527D709E18A /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		80B6F3E96EC2A6D97F54D2BCAA6EBF8E /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		821BEAD110C6ED4590D434282EB90C34 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		82C5F1B943451D423E0829208E91A263 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B68D21D587A4788E84A60FAD48BD2FBC /* CoreFoundation.framework */; };
-		936E7D4DF1A7D9645EAA0EB3A6377578 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A513E890960D46F8A6E4408810B42FB1 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		BCB5DC429A9A8B8DCAB57596A4768A76 /* NSMutableArray+STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C0C3E0D613BFEEAD03446E4FCB6D3827 /* Pods-MenuBarRadio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F34AD165F1A4D3C23D76DAE8199E5EA1 /* Pods-MenuBarRadio-dummy.m */; };
-		C2A8A78FC2BC0ACC04FE36AD272DB5CF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08F928CB695D9A09D335C2686DFFDC6E /* SystemConfiguration.framework */; };
-		CA94F86A596AFC5B8751E8015F24CAEB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF6D2EA33FA7904ECD8148707DCFD6 /* Cocoa.framework */; };
-		D5AB69B97A5284CE39B462B5DEFFC8F9 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E6DBF6C8F44D4CFB8FE068BC373C185E /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E75978F60B5ADEA192D93DD90F12E0D5 /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		EBD7ABB64BB6446A1E6A44C6656800F9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9BF6D2EA33FA7904ECD8148707DCFD6 /* Cocoa.framework */; };
-		FFB8CB72E318D429F5A201C26913708A /* Pods-MenuBarRadioTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2F54C56F8BA3998B3ECAD327D1A7F0 /* Pods-MenuBarRadioTests-dummy.m */; };
+		0F0B488CEE38AABB480E9149E23BA283 /* STKDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 20CD611733FDACDFA7990648F4797514 /* STKDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1F28EFEAE83B9738161F48AD786CF454 /* STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = A366F3B919D1B775EBB467441937B70A /* STKAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		201A5D93B1EE4977A8397F3A75EDC290 /* Pods-MenuBarRadio-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D436C60C02EEB226EBC651B920557CB /* Pods-MenuBarRadio-dummy.m */; };
+		41B4A7D6FAB8DFD53573D16D0FD7DD18 /* STKHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 382A7129F4AE911C8ECBE072A6D7A88D /* STKHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		421E8A2E56A25EBF24A9CBF3DC0314A4 /* STKAutoRecoveringHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = F0BA853604990E298085DEED76C66286 /* STKAutoRecoveringHTTPDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		55E45CBAAA59BBE53F961E4F4CD51530 /* STKLocalFileDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = B820188D9641BCCDC15F2280B92B9C41 /* STKLocalFileDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7065A1A2EDC9D55043E642AC61A657D6 /* STKCoreFoundationDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 560D74BCFCD26664C8B743532966DD6A /* STKCoreFoundationDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		70DF7472C93C00698B6971FE072E1400 /* STKLocalFileDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C4977D45417A957F912602665B2001B /* STKLocalFileDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		817FE8CD7AE122FFB8B7F61C70F05EBC /* NSMutableArray+STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 42D737012133EACF4806F810FAE14B45 /* NSMutableArray+STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		96C670F5E2D9706752575746A57E3067 /* STKCoreFoundationDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 105BFD859C1CFB2B8187E917B77C50F3 /* STKCoreFoundationDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		990499863096D82BD2C0A7E428129395 /* STKAutoRecoveringHTTPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B99AB425B23DFBF4C4BAE861ACFF9AA /* STKAutoRecoveringHTTPDataSource.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A17B16AB9A10E31B397A43D84935610D /* STKDataSourceWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B6D41B76B4A6ACC908CC7312EE7A8BD0 /* STKDataSourceWrapper.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A4E0F4AD681530F36A590AFB08FBCBFF /* STKDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 64177B78A80596D4719200C679F2C586 /* STKDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A5BB3383C2F5925335F24EB47A201B2A /* Pods-MenuBarRadioTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 810580DEFC1B886990E2D64E96395F79 /* Pods-MenuBarRadioTests-dummy.m */; };
+		ADEC2948CA12CE5BC017A7DE7A6CAB49 /* STKQueueEntry.h in Headers */ = {isa = PBXBuildFile; fileRef = 7413F61E5F94651BC8BAF306C9357040 /* STKQueueEntry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CEB710D57E67286DE2D3DFF075EB6BB2 /* STKDataSourceWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F7DAB1BBB35E252D6798669EC44AE1D7 /* STKDataSourceWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D2A7CD127E4E5320225B4D4765AEF5CF /* STKHTTPDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BE2F82807B100A53B846BEF63F2A046 /* STKHTTPDataSource.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DAA368C9A384EB851BB31270E1DC53B3 /* NSMutableArray+STKAudioPlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 73467AC2FC0BF95D730096B714E9144E /* NSMutableArray+STKAudioPlayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ECE319BAC0C7E57F04595FE957ADE08A /* STKQueueEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA843C764C42C1F880455E58E50AB77 /* STKQueueEntry.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EE120C80C135C980D6B97978B1C0E6DF /* STKAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8CFEE38E9C1B3AC16716318B5A0A4A /* STKAudioPlayer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FC3F377369804393217678781FD8D0A1 /* StreamingKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 899654D2C4ACA1446A4F7C3944214699 /* StreamingKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2DB3BFE8AC28EC7983E89DEEAF928FCA /* PBXContainerItemProxy */ = {
+		3FD3E2A0D372D09F0C5AE55E17A66D88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AD6263C51FBCE8B3437ED999C7E8ABC1;
+			remoteGlobalIDString = BB6CE13DEDC23DDA163BD751A4391794;
 			remoteInfo = StreamingKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B67849A46D3C1C373030E9226D5C32 /* Pods-MenuBarRadio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarRadio-acknowledgements.markdown"; sourceTree = "<group>"; };
-		07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
-		083E7E8B216693F36F2BC5B966850769 /* Pods-MenuBarRadioTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarRadioTests-resources.sh"; sourceTree = "<group>"; };
-		08F928CB695D9A09D335C2686DFFDC6E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		0F2F54C56F8BA3998B3ECAD327D1A7F0 /* Pods-MenuBarRadioTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarRadioTests-dummy.m"; sourceTree = "<group>"; };
-		11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = StreamingKit/StreamingKit/STKDataSource.m; sourceTree = "<group>"; };
-		3AA1E6AABFFF9D8E43B92437960F6C39 /* libPods-MenuBarRadioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MenuBarRadioTests.a"; path = "libPods-MenuBarRadioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = StreamingKit/StreamingKit/STKDataSource.h; sourceTree = "<group>"; };
-		4726AD379071ECB6FA8FC598366CA17B /* Pods-MenuBarRadioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadioTests.release.xcconfig"; sourceTree = "<group>"; };
-		4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
-		50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
-		586799532508D3C404D514A518F794BF /* Pods-MenuBarRadioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadioTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = StreamingKit/StreamingKit/STKDataSourceWrapper.m; sourceTree = "<group>"; };
-		5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = StreamingKit/StreamingKit/STKLocalFileDataSource.m; sourceTree = "<group>"; };
-		6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = StreamingKit/StreamingKit/STKAudioPlayer.h; sourceTree = "<group>"; };
-		6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = StreamingKit/StreamingKit/STKLocalFileDataSource.h; sourceTree = "<group>"; };
-		720483F825AA8BC8B28F90139DDB05D4 /* Pods-MenuBarRadio-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarRadio-resources.sh"; sourceTree = "<group>"; };
-		728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = StreamingKit/StreamingKit/STKHTTPDataSource.h; sourceTree = "<group>"; };
-		7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = StreamingKit/StreamingKit/STKQueueEntry.h; sourceTree = "<group>"; };
-		74BC731977A14E1795381236B81D2200 /* Pods-MenuBarRadio-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarRadio-frameworks.sh"; sourceTree = "<group>"; };
-		7937D71B717A3A5478AC888B446CA110 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
-		837AE27D485E8DBA9FF0B1069997C92D /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
-		88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = StreamingKit/StreamingKit/STKQueueEntry.m; sourceTree = "<group>"; };
-		8C4056CE51E14C7001510C2C375BCEA0 /* libStreamingKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libStreamingKit.a; path = libStreamingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A2436A6B716BCE0DBDBDD3CEA0154B1B /* Pods-MenuBarRadio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarRadio-acknowledgements.plist"; sourceTree = "<group>"; };
-		A9BF6D2EA33FA7904ECD8148707DCFD6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		AA4CC5BE18B22F29E8AD01A528C2B465 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AudioToolbox.framework; sourceTree = DEVELOPER_DIR; };
-		AB25EE26E0DBA050282E199EB2B26CB5 /* AudioUnit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioUnit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/AudioUnit.framework; sourceTree = DEVELOPER_DIR; };
-		AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StreamingKit-dummy.m"; sourceTree = "<group>"; };
-		B68D21D587A4788E84A60FAD48BD2FBC /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		B781C4791E953E0B5FC6D1DB0BD924B6 /* libPods-MenuBarRadio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-MenuBarRadio.a"; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE1621D5D3063301F030BF2A1BBDC503 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = StreamingKit/StreamingKit/STKDataSourceWrapper.h; sourceTree = "<group>"; };
-		CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = StreamingKit/StreamingKit/STKAudioPlayer.m; sourceTree = "<group>"; };
-		D3556480367F2551FC5A76A342EC519D /* Pods-MenuBarRadioTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarRadioTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D680C21100D052BF718E97DCD897051F /* StreamingKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StreamingKit.xcconfig; sourceTree = "<group>"; };
-		DE5B448B319785781D75A9380D7B6F67 /* Pods-MenuBarRadioTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MenuBarRadioTests-frameworks.sh"; sourceTree = "<group>"; };
-		DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
-		E1DBEF30A813211C6D701146C1564BC6 /* Pods-MenuBarRadioTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarRadioTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		E4F28301A7F9CFC2A2B872F5C146AAF4 /* StreamingKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-prefix.pch"; sourceTree = "<group>"; };
-		E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = StreamingKit/StreamingKit/STKHTTPDataSource.m; sourceTree = "<group>"; };
-		EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
-		F34AD165F1A4D3C23D76DAE8199E5EA1 /* Pods-MenuBarRadio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarRadio-dummy.m"; sourceTree = "<group>"; };
+		0D436C60C02EEB226EBC651B920557CB /* Pods-MenuBarRadio-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarRadio-dummy.m"; sourceTree = "<group>"; };
+		105BFD859C1CFB2B8187E917B77C50F3 /* STKCoreFoundationDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKCoreFoundationDataSource.h; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.h; sourceTree = "<group>"; };
+		117875A993BA6AA7E87424AA70B4A44E /* Pods-MenuBarRadioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadioTests.release.xcconfig"; sourceTree = "<group>"; };
+		16B944B0BC3FB28E3BF1C1F4AB0EE310 /* Pods-MenuBarRadio-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarRadio-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1D1D258B3BBEBA1B6B405418275989D5 /* Pods-MenuBarRadio */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MenuBarRadio"; path = "libPods-MenuBarRadio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20CD611733FDACDFA7990648F4797514 /* STKDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSource.m; path = StreamingKit/StreamingKit/STKDataSource.m; sourceTree = "<group>"; };
+		382A7129F4AE911C8ECBE072A6D7A88D /* STKHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKHTTPDataSource.m; path = StreamingKit/StreamingKit/STKHTTPDataSource.m; sourceTree = "<group>"; };
+		3F8CFEE38E9C1B3AC16716318B5A0A4A /* STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAudioPlayer.m; path = StreamingKit/StreamingKit/STKAudioPlayer.m; sourceTree = "<group>"; };
+		42D737012133EACF4806F810FAE14B45 /* NSMutableArray+STKAudioPlayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+STKAudioPlayer.m"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.m"; sourceTree = "<group>"; };
+		4B99AB425B23DFBF4C4BAE861ACFF9AA /* STKAutoRecoveringHTTPDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKAutoRecoveringHTTPDataSource.m; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.m; sourceTree = "<group>"; };
+		560D74BCFCD26664C8B743532966DD6A /* STKCoreFoundationDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKCoreFoundationDataSource.m; path = StreamingKit/StreamingKit/STKCoreFoundationDataSource.m; sourceTree = "<group>"; };
+		5778F1D8EA929B2C4982DED2E5916D23 /* Pods-MenuBarRadio-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarRadio-acknowledgements.plist"; sourceTree = "<group>"; };
+		62D38369A20FCC664EC17F4BA511FE36 /* Pods-MenuBarRadioTests */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-MenuBarRadioTests"; path = "libPods-MenuBarRadioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		64177B78A80596D4719200C679F2C586 /* STKDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSource.h; path = StreamingKit/StreamingKit/STKDataSource.h; sourceTree = "<group>"; };
+		73467AC2FC0BF95D730096B714E9144E /* NSMutableArray+STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+STKAudioPlayer.h"; path = "StreamingKit/StreamingKit/NSMutableArray+STKAudioPlayer.h"; sourceTree = "<group>"; };
+		7413F61E5F94651BC8BAF306C9357040 /* STKQueueEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKQueueEntry.h; path = StreamingKit/StreamingKit/STKQueueEntry.h; sourceTree = "<group>"; };
+		79B98E286252D5EB3CF495D9102ACCA9 /* StreamingKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StreamingKit.debug.xcconfig; sourceTree = "<group>"; };
+		7BE2F82807B100A53B846BEF63F2A046 /* STKHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKHTTPDataSource.h; path = StreamingKit/StreamingKit/STKHTTPDataSource.h; sourceTree = "<group>"; };
+		7C4977D45417A957F912602665B2001B /* STKLocalFileDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKLocalFileDataSource.h; path = StreamingKit/StreamingKit/STKLocalFileDataSource.h; sourceTree = "<group>"; };
+		810580DEFC1B886990E2D64E96395F79 /* Pods-MenuBarRadioTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MenuBarRadioTests-dummy.m"; sourceTree = "<group>"; };
+		835E8F8FE4CECC880340D380B2C5D517 /* Pods-MenuBarRadioTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MenuBarRadioTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8579009AC92A762B3883A620EE678A04 /* Pods-MenuBarRadio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadio.release.xcconfig"; sourceTree = "<group>"; };
+		899654D2C4ACA1446A4F7C3944214699 /* StreamingKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StreamingKit-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A366F3B919D1B775EBB467441937B70A /* STKAudioPlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAudioPlayer.h; path = StreamingKit/StreamingKit/STKAudioPlayer.h; sourceTree = "<group>"; };
+		ABA843C764C42C1F880455E58E50AB77 /* STKQueueEntry.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKQueueEntry.m; path = StreamingKit/StreamingKit/STKQueueEntry.m; sourceTree = "<group>"; };
+		B6D41B76B4A6ACC908CC7312EE7A8BD0 /* STKDataSourceWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKDataSourceWrapper.m; path = StreamingKit/StreamingKit/STKDataSourceWrapper.m; sourceTree = "<group>"; };
+		B820188D9641BCCDC15F2280B92B9C41 /* STKLocalFileDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STKLocalFileDataSource.m; path = StreamingKit/StreamingKit/STKLocalFileDataSource.m; sourceTree = "<group>"; };
+		DBFD6E817D593043470CB1362EB4BA17 /* StreamingKit */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = StreamingKit; path = libStreamingKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC8EC9059E62347C79098D83465FFFFE /* StreamingKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StreamingKit-prefix.pch"; sourceTree = "<group>"; };
+		EFB428E44DFFF30E7C7A919B50ACF8D1 /* Pods-MenuBarRadioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F0BA853604990E298085DEED76C66286 /* STKAutoRecoveringHTTPDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKAutoRecoveringHTTPDataSource.h; path = StreamingKit/StreamingKit/STKAutoRecoveringHTTPDataSource.h; sourceTree = "<group>"; };
+		F47D5578AE7095BC6FFFBDAC829A7B76 /* Pods-MenuBarRadioTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MenuBarRadioTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F6B47A10F8FA7EB4C2E39D76CDC771C6 /* StreamingKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StreamingKit.release.xcconfig; sourceTree = "<group>"; };
+		F7C462F4CB01D66C0C8E2459F9E37DD9 /* Pods-MenuBarRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MenuBarRadio.debug.xcconfig"; sourceTree = "<group>"; };
+		F7DAB1BBB35E252D6798669EC44AE1D7 /* STKDataSourceWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STKDataSourceWrapper.h; path = StreamingKit/StreamingKit/STKDataSourceWrapper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B250C16C82F82B5EF995B5B59984977 /* Frameworks */ = {
+		15B1D30B47FA95D1D51623CDF4F7304E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD7ABB64BB6446A1E6A44C6656800F9 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		874B734D5A6EEDBC5C5FC8FFFB324A97 /* Frameworks */ = {
+		4B6A5EC0FD3D303026C7158429442197 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E74BD1B5A18D40F1088C2599651352 /* AudioToolbox.framework in Frameworks */,
-				52DD3060F4611400D5FE0BDDB499018B /* AudioUnit.framework in Frameworks */,
-				65BC8AA86DE2A05F08CCB49D64C9C4AD /* CFNetwork.framework in Frameworks */,
-				CA94F86A596AFC5B8751E8015F24CAEB /* Cocoa.framework in Frameworks */,
-				82C5F1B943451D423E0829208E91A263 /* CoreFoundation.framework in Frameworks */,
-				C2A8A78FC2BC0ACC04FE36AD272DB5CF /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8626D87B9A7A9C5CB022CA0AB9A9FCF /* Frameworks */ = {
+		8C06C1E42392FCEE9262841629D832BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				259D46229B4C598A8F25FE3446B6AEF6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		003241FF73248B6E4FCB13D1A9878AC0 /* StreamingKit */ = {
+		27A51A08065437D6B6BC6174AE57ED60 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				07E76151F2E0078308EBB02A4482A89F /* NSMutableArray+STKAudioPlayer.h */,
-				4F9665E2659378F533AAED0C25EBFDE3 /* NSMutableArray+STKAudioPlayer.m */,
-				6FC1F9C983CFB36C8906CC65DF667F66 /* STKAudioPlayer.h */,
-				CCD0ADDC21D9E5BD0E8FE28B8626B88E /* STKAudioPlayer.m */,
-				EB6E46BF5E568D736260D1A17C1718E0 /* STKAutoRecoveringHTTPDataSource.h */,
-				DEF8C05345E5055C917166FC6F4F69AF /* STKAutoRecoveringHTTPDataSource.m */,
-				50B2FA99CF927A1704C710DDE3555E57 /* STKCoreFoundationDataSource.h */,
-				91621EBA09E97039713F96A7BBC10A47 /* STKCoreFoundationDataSource.m */,
-				3C3989523AF1F86FFB40DCE953FD6EB2 /* STKDataSource.h */,
-				11763C021B1761AF10F7CA13CB8BB052 /* STKDataSource.m */,
-				C088807C34C655BEF920AF803E1426B8 /* STKDataSourceWrapper.h */,
-				5D480870EA778FB11F04B980F8A6BDBD /* STKDataSourceWrapper.m */,
-				728B2384F0E66466E38F737002C1A62B /* STKHTTPDataSource.h */,
-				E90A69DB95D7FC25D1112FD07401CF58 /* STKHTTPDataSource.m */,
-				6FF11063AF72909AB74B517B9627C641 /* STKLocalFileDataSource.h */,
-				5E04A82CF68EC169EC0669FFAD1B427E /* STKLocalFileDataSource.m */,
-				7462A1565CCD7C88146D4D8C7EF6D4F4 /* STKQueueEntry.h */,
-				88A0D7124765FA8419151543DEFA49E2 /* STKQueueEntry.m */,
-				A699C9F0FC17D324B90D5E5566BF132B /* Support Files */,
-			);
-			name = StreamingKit;
-			path = StreamingKit;
-			sourceTree = "<group>";
-		};
-		029A70C52ECE4EEAA3E4A94413D30608 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				72BF21DAC903808E23DE59F60B166122 /* OS X */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		0F9A09622DA567AD6481140B0B992347 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D15A79D4F4D471AFFB2E722C417A6213 /* Pods-MenuBarRadio */,
-				82CF632128F47EC911AB7E421E401CFD /* Pods-MenuBarRadioTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		55E1F0F4226335DD634B98B88E86D0F9 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				003241FF73248B6E4FCB13D1A9878AC0 /* StreamingKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		72BF21DAC903808E23DE59F60B166122 /* OS X */ = {
-			isa = PBXGroup;
-			children = (
-				AA4CC5BE18B22F29E8AD01A528C2B465 /* AudioToolbox.framework */,
-				AB25EE26E0DBA050282E199EB2B26CB5 /* AudioUnit.framework */,
-				BE1621D5D3063301F030BF2A1BBDC503 /* CFNetwork.framework */,
-				A9BF6D2EA33FA7904ECD8148707DCFD6 /* Cocoa.framework */,
-				B68D21D587A4788E84A60FAD48BD2FBC /* CoreFoundation.framework */,
-				08F928CB695D9A09D335C2686DFFDC6E /* SystemConfiguration.framework */,
-			);
-			name = "OS X";
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				029A70C52ECE4EEAA3E4A94413D30608 /* Frameworks */,
-				55E1F0F4226335DD634B98B88E86D0F9 /* Pods */,
-				A35B2E84B241D43A5BA629DC95BB7385 /* Products */,
-				0F9A09622DA567AD6481140B0B992347 /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		82CF632128F47EC911AB7E421E401CFD /* Pods-MenuBarRadioTests */ = {
-			isa = PBXGroup;
-			children = (
-				D3556480367F2551FC5A76A342EC519D /* Pods-MenuBarRadioTests-acknowledgements.markdown */,
-				E1DBEF30A813211C6D701146C1564BC6 /* Pods-MenuBarRadioTests-acknowledgements.plist */,
-				0F2F54C56F8BA3998B3ECAD327D1A7F0 /* Pods-MenuBarRadioTests-dummy.m */,
-				DE5B448B319785781D75A9380D7B6F67 /* Pods-MenuBarRadioTests-frameworks.sh */,
-				083E7E8B216693F36F2BC5B966850769 /* Pods-MenuBarRadioTests-resources.sh */,
-				586799532508D3C404D514A518F794BF /* Pods-MenuBarRadioTests.debug.xcconfig */,
-				4726AD379071ECB6FA8FC598366CA17B /* Pods-MenuBarRadioTests.release.xcconfig */,
-			);
-			name = "Pods-MenuBarRadioTests";
-			path = "Target Support Files/Pods-MenuBarRadioTests";
-			sourceTree = "<group>";
-		};
-		A35B2E84B241D43A5BA629DC95BB7385 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B781C4791E953E0B5FC6D1DB0BD924B6 /* libPods-MenuBarRadio.a */,
-				3AA1E6AABFFF9D8E43B92437960F6C39 /* libPods-MenuBarRadioTests.a */,
-				8C4056CE51E14C7001510C2C375BCEA0 /* libStreamingKit.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		A699C9F0FC17D324B90D5E5566BF132B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D680C21100D052BF718E97DCD897051F /* StreamingKit.xcconfig */,
-				AFE553C08A5A4C10FFF3941C82D730CB /* StreamingKit-dummy.m */,
-				E4F28301A7F9CFC2A2B872F5C146AAF4 /* StreamingKit-prefix.pch */,
+				899654D2C4ACA1446A4F7C3944214699 /* StreamingKit-dummy.m */,
+				DC8EC9059E62347C79098D83465FFFFE /* StreamingKit-prefix.pch */,
+				79B98E286252D5EB3CF495D9102ACCA9 /* StreamingKit.debug.xcconfig */,
+				F6B47A10F8FA7EB4C2E39D76CDC771C6 /* StreamingKit.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/StreamingKit";
 			sourceTree = "<group>";
 		};
-		D15A79D4F4D471AFFB2E722C417A6213 /* Pods-MenuBarRadio */ = {
+		3C2EBC235A1D1C9EC8123B01423BE3DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B67849A46D3C1C373030E9226D5C32 /* Pods-MenuBarRadio-acknowledgements.markdown */,
-				A2436A6B716BCE0DBDBDD3CEA0154B1B /* Pods-MenuBarRadio-acknowledgements.plist */,
-				F34AD165F1A4D3C23D76DAE8199E5EA1 /* Pods-MenuBarRadio-dummy.m */,
-				74BC731977A14E1795381236B81D2200 /* Pods-MenuBarRadio-frameworks.sh */,
-				720483F825AA8BC8B28F90139DDB05D4 /* Pods-MenuBarRadio-resources.sh */,
-				7937D71B717A3A5478AC888B446CA110 /* Pods-MenuBarRadio.debug.xcconfig */,
-				837AE27D485E8DBA9FF0B1069997C92D /* Pods-MenuBarRadio.release.xcconfig */,
+				1D1D258B3BBEBA1B6B405418275989D5 /* Pods-MenuBarRadio */,
+				62D38369A20FCC664EC17F4BA511FE36 /* Pods-MenuBarRadioTests */,
+				DBFD6E817D593043470CB1362EB4BA17 /* StreamingKit */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7E1BF990A96F4C44CACD7269144FEE2C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				976719E71B35B8022D7D19FD88C46C6D /* Pods-MenuBarRadio */,
+				D5D58F34FACC8356DBBC91E7C3060B6E /* Pods-MenuBarRadioTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		976719E71B35B8022D7D19FD88C46C6D /* Pods-MenuBarRadio */ = {
+			isa = PBXGroup;
+			children = (
+				16B944B0BC3FB28E3BF1C1F4AB0EE310 /* Pods-MenuBarRadio-acknowledgements.markdown */,
+				5778F1D8EA929B2C4982DED2E5916D23 /* Pods-MenuBarRadio-acknowledgements.plist */,
+				0D436C60C02EEB226EBC651B920557CB /* Pods-MenuBarRadio-dummy.m */,
+				F7C462F4CB01D66C0C8E2459F9E37DD9 /* Pods-MenuBarRadio.debug.xcconfig */,
+				8579009AC92A762B3883A620EE678A04 /* Pods-MenuBarRadio.release.xcconfig */,
 			);
 			name = "Pods-MenuBarRadio";
 			path = "Target Support Files/Pods-MenuBarRadio";
 			sourceTree = "<group>";
 		};
+		9E15FE001463F42EF8C68D57555B3943 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6E6FFEE57A311A5CCAA4C41C04781BB /* StreamingKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B6E6FFEE57A311A5CCAA4C41C04781BB /* StreamingKit */ = {
+			isa = PBXGroup;
+			children = (
+				73467AC2FC0BF95D730096B714E9144E /* NSMutableArray+STKAudioPlayer.h */,
+				42D737012133EACF4806F810FAE14B45 /* NSMutableArray+STKAudioPlayer.m */,
+				A366F3B919D1B775EBB467441937B70A /* STKAudioPlayer.h */,
+				3F8CFEE38E9C1B3AC16716318B5A0A4A /* STKAudioPlayer.m */,
+				F0BA853604990E298085DEED76C66286 /* STKAutoRecoveringHTTPDataSource.h */,
+				4B99AB425B23DFBF4C4BAE861ACFF9AA /* STKAutoRecoveringHTTPDataSource.m */,
+				105BFD859C1CFB2B8187E917B77C50F3 /* STKCoreFoundationDataSource.h */,
+				560D74BCFCD26664C8B743532966DD6A /* STKCoreFoundationDataSource.m */,
+				64177B78A80596D4719200C679F2C586 /* STKDataSource.h */,
+				20CD611733FDACDFA7990648F4797514 /* STKDataSource.m */,
+				F7DAB1BBB35E252D6798669EC44AE1D7 /* STKDataSourceWrapper.h */,
+				B6D41B76B4A6ACC908CC7312EE7A8BD0 /* STKDataSourceWrapper.m */,
+				7BE2F82807B100A53B846BEF63F2A046 /* STKHTTPDataSource.h */,
+				382A7129F4AE911C8ECBE072A6D7A88D /* STKHTTPDataSource.m */,
+				7C4977D45417A957F912602665B2001B /* STKLocalFileDataSource.h */,
+				B820188D9641BCCDC15F2280B92B9C41 /* STKLocalFileDataSource.m */,
+				7413F61E5F94651BC8BAF306C9357040 /* STKQueueEntry.h */,
+				ABA843C764C42C1F880455E58E50AB77 /* STKQueueEntry.m */,
+				27A51A08065437D6B6BC6174AE57ED60 /* Support Files */,
+			);
+			name = StreamingKit;
+			path = StreamingKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				9E15FE001463F42EF8C68D57555B3943 /* Pods */,
+				3C2EBC235A1D1C9EC8123B01423BE3DB /* Products */,
+				7E1BF990A96F4C44CACD7269144FEE2C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D5D58F34FACC8356DBBC91E7C3060B6E /* Pods-MenuBarRadioTests */ = {
+			isa = PBXGroup;
+			children = (
+				835E8F8FE4CECC880340D380B2C5D517 /* Pods-MenuBarRadioTests-acknowledgements.markdown */,
+				F47D5578AE7095BC6FFFBDAC829A7B76 /* Pods-MenuBarRadioTests-acknowledgements.plist */,
+				810580DEFC1B886990E2D64E96395F79 /* Pods-MenuBarRadioTests-dummy.m */,
+				EFB428E44DFFF30E7C7A919B50ACF8D1 /* Pods-MenuBarRadioTests.debug.xcconfig */,
+				117875A993BA6AA7E87424AA70B4A44E /* Pods-MenuBarRadioTests.release.xcconfig */,
+			);
+			name = "Pods-MenuBarRadioTests";
+			path = "Target Support Files/Pods-MenuBarRadioTests";
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		FACC1BD9B8338B094F7439F9CE9D7880 /* Headers */ = {
+		4FADCAB57C4E847467FD72FAC0B1D672 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCB5DC429A9A8B8DCAB57596A4768A76 /* NSMutableArray+STKAudioPlayer.h in Headers */,
-				17AF1A5771C9BAA9AC6BC8BB5392CC04 /* STKAudioPlayer.h in Headers */,
-				7F61CAAE6CD73B370D6B2527D709E18A /* STKAutoRecoveringHTTPDataSource.h in Headers */,
-				3E868602AD603E46F6606018ED561E1B /* STKCoreFoundationDataSource.h in Headers */,
-				37CCFE2BAE316AC9FE0F35AFCDD442D9 /* STKDataSource.h in Headers */,
-				D5AB69B97A5284CE39B462B5DEFFC8F9 /* STKDataSourceWrapper.h in Headers */,
-				E6DBF6C8F44D4CFB8FE068BC373C185E /* STKHTTPDataSource.h in Headers */,
-				3D9BFCB65CEA644B4FBB0D232AED0E41 /* STKLocalFileDataSource.h in Headers */,
-				936E7D4DF1A7D9645EAA0EB3A6377578 /* STKQueueEntry.h in Headers */,
+				DAA368C9A384EB851BB31270E1DC53B3 /* NSMutableArray+STKAudioPlayer.h in Headers */,
+				1F28EFEAE83B9738161F48AD786CF454 /* STKAudioPlayer.h in Headers */,
+				421E8A2E56A25EBF24A9CBF3DC0314A4 /* STKAutoRecoveringHTTPDataSource.h in Headers */,
+				96C670F5E2D9706752575746A57E3067 /* STKCoreFoundationDataSource.h in Headers */,
+				A4E0F4AD681530F36A590AFB08FBCBFF /* STKDataSource.h in Headers */,
+				CEB710D57E67286DE2D3DFF075EB6BB2 /* STKDataSourceWrapper.h in Headers */,
+				D2A7CD127E4E5320225B4D4765AEF5CF /* STKHTTPDataSource.h in Headers */,
+				70DF7472C93C00698B6971FE072E1400 /* STKLocalFileDataSource.h in Headers */,
+				ADEC2948CA12CE5BC017A7DE7A6CAB49 /* STKQueueEntry.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A17DEB29D56780DC856D275885C398F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D96D227186112F4FE866376B42E84135 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		6680C84D70B2D7D273F9F3933CD317BD /* Pods-MenuBarRadioTests */ = {
+		2016EEA7BEBCF867AD1E507AC04DEBB5 /* Pods-MenuBarRadio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BEB3ED3AE95A4922A5C76F75AA6EB199 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadioTests" */;
+			buildConfigurationList = F378064289238A5A74FFB26E3E6E9FDC /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadio" */;
 			buildPhases = (
-				FB8818535350743D7B9683842D34EBFB /* Sources */,
-				1B250C16C82F82B5EF995B5B59984977 /* Frameworks */,
+				D96D227186112F4FE866376B42E84135 /* Headers */,
+				3CEFC8467F2AD01D86C46970DAD444AB /* Sources */,
+				4B6A5EC0FD3D303026C7158429442197 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C0EE6E99FDD7E6707B4E783D6055A87 /* PBXTargetDependency */,
+			);
+			name = "Pods-MenuBarRadio";
+			productName = "Pods-MenuBarRadio";
+			productReference = 1D1D258B3BBEBA1B6B405418275989D5 /* Pods-MenuBarRadio */;
+			productType = "com.apple.product-type.library.static";
+		};
+		583068D14724837267CC0B33EDD300BA /* Pods-MenuBarRadioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18E1406FD0D6C1AA83CB9D6B2B2CC459 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadioTests" */;
+			buildPhases = (
+				A17DEB29D56780DC856D275885C398F4 /* Headers */,
+				97CEAB46D7588E19259E3BA193469A54 /* Sources */,
+				15B1D30B47FA95D1D51623CDF4F7304E /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -291,16 +282,16 @@
 			);
 			name = "Pods-MenuBarRadioTests";
 			productName = "Pods-MenuBarRadioTests";
-			productReference = 3AA1E6AABFFF9D8E43B92437960F6C39 /* libPods-MenuBarRadioTests.a */;
+			productReference = 62D38369A20FCC664EC17F4BA511FE36 /* Pods-MenuBarRadioTests */;
 			productType = "com.apple.product-type.library.static";
 		};
-		AD6263C51FBCE8B3437ED999C7E8ABC1 /* StreamingKit */ = {
+		BB6CE13DEDC23DDA163BD751A4391794 /* StreamingKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B85E4053CE3F0CBCD32CAED36E84793 /* Build configuration list for PBXNativeTarget "StreamingKit" */;
+			buildConfigurationList = 35521CA4F543665B1B63291DD5D7DD9A /* Build configuration list for PBXNativeTarget "StreamingKit" */;
 			buildPhases = (
-				F990345DE06C2BA6A81536DD441AAA9C /* Sources */,
-				874B734D5A6EEDBC5C5FC8FFFB324A97 /* Frameworks */,
-				FACC1BD9B8338B094F7439F9CE9D7880 /* Headers */,
+				4FADCAB57C4E847467FD72FAC0B1D672 /* Headers */,
+				631D9AAB7A0DA1901ACD0239DB491976 /* Sources */,
+				8C06C1E42392FCEE9262841629D832BD /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,167 +299,89 @@
 			);
 			name = StreamingKit;
 			productName = StreamingKit;
-			productReference = 8C4056CE51E14C7001510C2C375BCEA0 /* libStreamingKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		E3F22F40CB00812B591F1CA03A4407E4 /* Pods-MenuBarRadio */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 13711A7B85107DDFA05538B41F1F96F9 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadio" */;
-			buildPhases = (
-				BDE402124BF11206E9766E2D0D4F5285 /* Sources */,
-				C8626D87B9A7A9C5CB022CA0AB9A9FCF /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				22141D7919A115D916F5EC36E0BD21FD /* PBXTargetDependency */,
-			);
-			name = "Pods-MenuBarRadio";
-			productName = "Pods-MenuBarRadio";
-			productReference = B781C4791E953E0B5FC6D1DB0BD924B6 /* libPods-MenuBarRadio.a */;
+			productReference = DBFD6E817D593043470CB1362EB4BA17 /* StreamingKit */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0930;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				Base,
 				en,
 			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A35B2E84B241D43A5BA629DC95BB7385 /* Products */;
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 3C2EBC235A1D1C9EC8123B01423BE3DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E3F22F40CB00812B591F1CA03A4407E4 /* Pods-MenuBarRadio */,
-				6680C84D70B2D7D273F9F3933CD317BD /* Pods-MenuBarRadioTests */,
-				AD6263C51FBCE8B3437ED999C7E8ABC1 /* StreamingKit */,
+				2016EEA7BEBCF867AD1E507AC04DEBB5 /* Pods-MenuBarRadio */,
+				583068D14724837267CC0B33EDD300BA /* Pods-MenuBarRadioTests */,
+				BB6CE13DEDC23DDA163BD751A4391794 /* StreamingKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		BDE402124BF11206E9766E2D0D4F5285 /* Sources */ = {
+		3CEFC8467F2AD01D86C46970DAD444AB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C3E0D613BFEEAD03446E4FCB6D3827 /* Pods-MenuBarRadio-dummy.m in Sources */,
+				201A5D93B1EE4977A8397F3A75EDC290 /* Pods-MenuBarRadio-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F990345DE06C2BA6A81536DD441AAA9C /* Sources */ = {
+		631D9AAB7A0DA1901ACD0239DB491976 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DCDDA258C92F59BABEAB8EB8FE2CB7A /* NSMutableArray+STKAudioPlayer.m in Sources */,
-				E75978F60B5ADEA192D93DD90F12E0D5 /* STKAudioPlayer.m in Sources */,
-				4501C1506664151D1A2A1CA5CF561264 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
-				80B6F3E96EC2A6D97F54D2BCAA6EBF8E /* STKCoreFoundationDataSource.m in Sources */,
-				6D53184330B0F3C269E0779DCE515C7F /* STKDataSource.m in Sources */,
-				1F1D8D32956CA5CA147D062B4366B719 /* STKDataSourceWrapper.m in Sources */,
-				A513E890960D46F8A6E4408810B42FB1 /* STKHTTPDataSource.m in Sources */,
-				821BEAD110C6ED4590D434282EB90C34 /* STKLocalFileDataSource.m in Sources */,
-				48E851F6F20C3A635F6F997F02E784A1 /* STKQueueEntry.m in Sources */,
-				7B92E6554A7EAF0D0C1D00BAED15B964 /* StreamingKit-dummy.m in Sources */,
+				817FE8CD7AE122FFB8B7F61C70F05EBC /* NSMutableArray+STKAudioPlayer.m in Sources */,
+				EE120C80C135C980D6B97978B1C0E6DF /* STKAudioPlayer.m in Sources */,
+				990499863096D82BD2C0A7E428129395 /* STKAutoRecoveringHTTPDataSource.m in Sources */,
+				7065A1A2EDC9D55043E642AC61A657D6 /* STKCoreFoundationDataSource.m in Sources */,
+				0F0B488CEE38AABB480E9149E23BA283 /* STKDataSource.m in Sources */,
+				A17B16AB9A10E31B397A43D84935610D /* STKDataSourceWrapper.m in Sources */,
+				41B4A7D6FAB8DFD53573D16D0FD7DD18 /* STKHTTPDataSource.m in Sources */,
+				55E45CBAAA59BBE53F961E4F4CD51530 /* STKLocalFileDataSource.m in Sources */,
+				ECE319BAC0C7E57F04595FE957ADE08A /* STKQueueEntry.m in Sources */,
+				FC3F377369804393217678781FD8D0A1 /* StreamingKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FB8818535350743D7B9683842D34EBFB /* Sources */ = {
+		97CEAB46D7588E19259E3BA193469A54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFB8CB72E318D429F5A201C26913708A /* Pods-MenuBarRadioTests-dummy.m in Sources */,
+				A5BB3383C2F5925335F24EB47A201B2A /* Pods-MenuBarRadioTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		22141D7919A115D916F5EC36E0BD21FD /* PBXTargetDependency */ = {
+		9C0EE6E99FDD7E6707B4E783D6055A87 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = StreamingKit;
-			target = AD6263C51FBCE8B3437ED999C7E8ABC1 /* StreamingKit */;
-			targetProxy = 2DB3BFE8AC28EC7983E89DEEAF928FCA /* PBXContainerItemProxy */;
+			target = BB6CE13DEDC23DDA163BD751A4391794 /* StreamingKit */;
+			targetProxy = 3FD3E2A0D372D09F0C5AE55E17A66D88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		590719D20F517F4A88416CB8F2C477F8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 586799532508D3C404D514A518F794BF /* Pods-MenuBarRadioTests.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		6564EBBFEC06EBE5CFE595A81DC56A3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7937D71B717A3A5478AC888B446CA110 /* Pods-MenuBarRadio.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		666A1EC825EA2B1AB14C1065C030D74E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D680C21100D052BF718E97DCD897051F /* StreamingKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-			};
-			name = Debug;
-		};
-		756A8915349BF57F06C07F32230CEF1A /* Release */ = {
+		16F37D961BD142A847EE7A8BCECC4D13 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -491,13 +404,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -516,17 +429,133 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		8A31A76A03ABB32303F19ACF1C49948D /* Debug */ = {
+		2FF3CF80E1D5167BAD1FFAF87E5B68AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 117875A993BA6AA7E87424AA70B4A44E /* Pods-MenuBarRadioTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3DA96CD861F20F7D63BC07138FBC7AA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFB428E44DFFF30E7C7A919B50ACF8D1 /* Pods-MenuBarRadioTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		51B4AA7DDA3ADDF40FBDCDDB87B6EB9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6B47A10F8FA7EB4C2E39D76CDC771C6 /* StreamingKit.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = StreamingKit;
+				PRODUCT_NAME = StreamingKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		7B656C84524EE467752578ADF18F881D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79B98E286252D5EB3CF495D9102ACCA9 /* StreamingKit.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = StreamingKit;
+				PRODUCT_NAME = StreamingKit;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		7E15BA96CC0A2D853DCF8B4A65EE605C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8579009AC92A762B3883A620EE678A04 /* Pods-MenuBarRadio.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		83C3234BEBF81359D2523064DDDB2364 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -549,13 +578,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -576,22 +605,25 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		9CD833E7267A814BCE2A4845693F7A33 /* Release */ = {
+		8AF495CFF09A15B1C81EBEB9BFAABADD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 837AE27D485E8DBA9FF0B1069997C92D /* Pods-MenuBarRadio.release.xcconfig */;
+			baseConfigurationReference = F7C462F4CB01D66C0C8E2459F9E37DD9 /* Pods-MenuBarRadio.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -605,90 +637,48 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
-		};
-		ACFFB839AD2DDA385EA6B5D0F83E8FFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D680C21100D052BF718E97DCD897051F /* StreamingKit.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				GCC_PREFIX_HEADER = "Target Support Files/StreamingKit/StreamingKit-prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-			};
-			name = Release;
-		};
-		DBF58781F91A9C24C814168EAEB80C9A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4726AD379071ECB6FA8FC598366CA17B /* Pods-MenuBarRadioTests.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13711A7B85107DDFA05538B41F1F96F9 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadio" */ = {
+		18E1406FD0D6C1AA83CB9D6B2B2CC459 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6564EBBFEC06EBE5CFE595A81DC56A3E /* Debug */,
-				9CD833E7267A814BCE2A4845693F7A33 /* Release */,
+				3DA96CD861F20F7D63BC07138FBC7AA2 /* Debug */,
+				2FF3CF80E1D5167BAD1FFAF87E5B68AE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+		35521CA4F543665B1B63291DD5D7DD9A /* Build configuration list for PBXNativeTarget "StreamingKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8A31A76A03ABB32303F19ACF1C49948D /* Debug */,
-				756A8915349BF57F06C07F32230CEF1A /* Release */,
+				7B656C84524EE467752578ADF18F881D /* Debug */,
+				51B4AA7DDA3ADDF40FBDCDDB87B6EB9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B85E4053CE3F0CBCD32CAED36E84793 /* Build configuration list for PBXNativeTarget "StreamingKit" */ = {
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				666A1EC825EA2B1AB14C1065C030D74E /* Debug */,
-				ACFFB839AD2DDA385EA6B5D0F83E8FFC /* Release */,
+				83C3234BEBF81359D2523064DDDB2364 /* Debug */,
+				16F37D961BD142A847EE7A8BCECC4D13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BEB3ED3AE95A4922A5C76F75AA6EB199 /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadioTests" */ = {
+		F378064289238A5A74FFB26E3E6E9FDC /* Build configuration list for PBXNativeTarget "Pods-MenuBarRadio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				590719D20F517F4A88416CB8F2C477F8 /* Debug */,
-				DBF58781F91A9C24C814168EAEB80C9A /* Release */,
+				8AF495CFF09A15B1C81EBEB9BFAABADD /* Debug */,
+				7E15BA96CC0A2D853DCF8B4A65EE605C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }

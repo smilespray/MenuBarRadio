@@ -4,9 +4,13 @@ PODS:
 DEPENDENCIES:
   - StreamingKit (>= 0.1.25)
 
+SPEC REPOS:
+  trunk:
+    - StreamingKit
+
 SPEC CHECKSUMS:
   StreamingKit: 70ca8608c206864b4d54a577eacb3c8bf7c72209
 
 PODFILE CHECKSUM: 28d173d1111cb229354811d1dd0f5de91faddb5e
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.11.2
